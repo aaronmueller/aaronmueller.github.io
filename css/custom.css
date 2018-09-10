@@ -1,0 +1,19 @@
+.time {
+	width: 20%;
+	vertical-align: top;
+}
+.info {
+	margin: 0px;
+	width: 100%;
+}
+
+body {
+	widht: 800px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
