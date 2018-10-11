@@ -1,0 +1,719 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %%
+%% LaTeX to get the ``??'' replaced with the number of the last page  %%
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[10pt]{article}
+\RequirePackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% LaTeX will typeset using Computer Modern Roman, which a lot of
+% non-mathematicians and non-engineers won't like. Also, a few PDF
+% viewers may not render CMR very well. Instead, Times New Roman can
+% be used. That's what this package does.
+\usepackage{times}
+
+% The automated optical recognition software used to digitize resume
+% information works best with fonts that do not have serifs. This
+% command uses a sans serif font throughout. Uncomment both lines (or at
+% least the second) to restore a Roman font (i.e., a font with serifs).
+% (NOTE: This requires the times package above)
+%\renewcommand{\familydefault}{\sfdefault}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+
+% This package helps LaTeX auto-hyphenate hyphenated words if you use
+% special hyphens. For example, bio\-/mimicry will properly hyphenate
+% ``mimicry'' if necessary.
+\usepackage[shortcuts]{extdash}
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+%includefoot, % Uncomment to put page number above margin
+marginparwidth=1.0in,     % Length of section titles
+marginparsep=.05in,       % Space between titles and text
+margin=0.9in,               % 1 inch margins
+includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+% Provides special list environments and macros to create new ones
+\usepackage[shortlabels]{enumitem}
+
+% Simpler bibsections for CV sections
+% (thanks to natbib for inspiration)
+%
+% * For lists of references with hanging indents and no numbers:
+%
+%   \begin{bibsection}
+%       \item ...
+%   \end{bibsection}
+%
+% * For numbered lists of references (with hanging indents):
+%
+%   \begin{bibenum}
+%       \item ...
+%   \end{bibenum}
+%
+%   Note that bibenum numbers continuously throughout. To reset the
+%   counter, use
+%
+%   \restartlist{bibenum}
+%
+%   at the place where you want the numbering to reset.
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+{\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{label=,leftmargin=\bibhang,%
+	itemindent=-\bibhang,
+	itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+	topsep=0pt}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=[\arabic*],resume,leftmargin={\bibhang+\widthof{[999]}},%
+	itemindent=-\bibhang,
+	itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+	topsep=0pt}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+{0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+	\parbox{4in}{\, \hfill %
+		\arabic{page} of \protect\pageref*{LastPage} % +LP
+		%                    \arabic{page}                               % -LP
+		\hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+	linkcolor=darkblue,urlcolor=darkblue,
+	anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% HEADING AT TOP OF CURRICULUM VITAE
+
+% The title (name) with a horizontal rule under it
+% (optional argument typesets an object right-justified across from name
+%  as well)
+%
+% Usage: \makeheading{name}
+%        OR
+%        \makeheading[right_object]{name}
+%
+% Place at top of document. It should be the first thing.
+% If ``right_object'' is provided in the square-braced optional
+% argument, it will be right justified on the same line as ``name'' at
+% the top of the CV. For example:
+%
+%       \makeheading[\emph{Curriculum vitae}]{Your Name}
+%
+% will put an emphasized ``Curriculum vitae'' at the top of the document
+% as a title. Likewise, a picture could be included:
+%
+%   \makeheading[{\includegraphics[height=1.5in]{my_picture}}]{Your Name}
+%
+% the picture will be flush right across from the name. For this example
+% to work, make sure the extra set of curly braces is included. Also
+% makes ure that \usepackage{graphicx} is somewhere in the preamble.
+\newcommand{\makeheading}[2][]%
+{\hspace*{-\marginparsep minus \marginparwidth}%
+	\begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+		{\large \bfseries #2 \hfill #1}\\[-0.15\baselineskip]%
+		\rule{\columnwidth}{1pt}%
+\end{minipage}}
+
+%%% SECTION HEADINGS
+
+% The section headings. Flush left in small caps down pseudo-margin.
+%
+% Usage: \section{section name}
+\renewcommand{\section}[1]{\pagebreak[3]%
+	\vspace{0.5\baselineskip}%
+	\phantomsection\addcontentsline{toc}{section}{#1}%
+	\noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\hyphenpenalty=10000\raggedright #1}}}%
+	\vspace{-\baselineskip}\par}
+
+%%% LISTS
+
+% This macro alters a list by removing some of the space that follows the list
+% (is used by lists below)
+\newcommand*\fixendlist[1]{%
+	\expandafter\let\csname preFixEndListend#1\expandafter\endcsname\csname end#1\endcsname
+	\expandafter\def\csname end#1\endcsname{\csname preFixEndListend#1\endcsname\vspace{-0.6\baselineskip}}}
+
+% These macros help ensure that items in outer-type lists do not get
+% separated from the next line by a page break
+% (they are used by lists below)
+\let\originalItem\item
+\newcommand*\fixouterlist[1]{%
+	\expandafter\let\csname preFixOuterList#1\expandafter\endcsname\csname #1\endcsname
+	\expandafter\def\csname #1\endcsname{\let\oldItem\item\def\item{\pagebreak[2]\oldItem}\csname preFixOuterList#1\endcsname}
+	\expandafter\let\csname preFixOuterListend#1\expandafter\endcsname\csname end#1\endcsname
+	\expandafter\def\csname end#1\endcsname{\let\item\oldItem\csname preFixOuterListend#1\endcsname}}
+\newcommand*\fixinnerlist[1]{%
+	\expandafter\let\csname preFixInnerList#1\expandafter\endcsname\csname #1\endcsname
+	\expandafter\def\csname #1\endcsname{\let\oldItem\item\let\item\originalItem\csname preFixInnerList#1\endcsname}
+	\expandafter\let\csname preFixInnerListend#1\expandafter\endcsname\csname end#1\endcsname
+	\expandafter\def\csname end#1\endcsname{\csname preFixInnerListend#1\endcsname\let\item\oldItem}}
+
+% An itemize-style list with lots of space between items
+%
+% Usage:
+%   \begin{outerlist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{outerlist}
+\newlist{outerlist}{itemize}{3}
+\setlist[outerlist]{label=\enskip\textbullet,leftmargin=*}
+\fixendlist{outerlist}
+\fixouterlist{outerlist}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+%
+% Usage:
+%   \begin{lonelist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{lonelist}
+\newlist{lonelist}{itemize}{3}
+\setlist[lonelist]{label=\enskip\textbullet,leftmargin=*,partopsep=0pt,topsep=0pt}
+\fixendlist{lonelist}
+\fixouterlist{lonelist}
+
+% An itemize-style list with little space between items
+%
+% Usage:
+%   \begin{innerlist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{innerlist}
+\newlist{innerlist}{itemize}{3}
+\setlist[innerlist]{label=\enskip--,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+\fixinnerlist{innerlist}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+%
+% Usage:
+%   \begin{loneinnerlist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{loneinnerlist}
+\newlist{loneinnerlist}{itemize}{3}
+\setlist[loneinnerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+\fixendlist{loneinnerlist}
+\fixinnerlist{loneinnerlist}
+
+%%% EXTRA SPACE
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+%%% FORMATTING MACROS
+
+% Provides a linked \doi{#1} that links doi:#1 to http://dx.doi.org/#1
+\usepackage{doi}
+% To change the text before the DOI, adjust this command
+%\renewcommand\doitext{doi:}
+
+% Provides a linked \url{#1} that doesn't require escape characters
+\usepackage{url}
+
+% You can adjust the style \url{} uses here:
+% (options are: same, rm, sf, tt; defaults to tt)
+\urlstyle{same}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+% (uncomment to typeset the e\-/mail address in typewriter font;
+%  otherwise, will be typeset in the \urlstyle above)
+%\DeclareUrlCommand\emaillink{\urlstyle{tt}}
+\providecommand*\emaillink[1]{\nolinkurl{#1}}
+\providecommand*\email[1]{\href{mailto:#1}{\emaillink{#1}}}
+
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em \TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+
+% Custom hyphenation rules for words that LaTeX has trouble with
+\hyphenation{bio-mim-ic-ry bio-in-spi-ra-tion re-us-a-ble pro-vid-er Media-Wiki}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\makeheading{\LARGE{Aaron M. Mueller}}
+	\\
+
+	\section{Contact}
+	Department of Computer Science
+	\hfill{\textit{Phone:} +1-502-550-4938} \\
+	Johns Hopkins University
+	\hfill{\textit{E-mail:} amueller@jhu.edu} \\
+	3400 N. Charles St., Hackerman 319
+	\hfill{\textit{Website:} aaronmueller.github.io} \\
+	Baltimore, MD 21218-2691 (U.S.A.)
+	
+	%%
+	%% In modern CV's, it seems like ``Objective'' is frowned upon. Instead,
+	%% incorporate it into a well-constructed cover letter. The ``More
+	%% information'' can go at the end of the CV, but it should not distract
+	%% from the section giving references available to contact.
+	%%
+	%
+	% \section{Objective}
+	%
+	% Placement in an academic position (i.e., faculty, postdoctoral, or
+	% research scientist) that allows for advanced research in distributed
+	% complex adaptive systems (i.e., modeling, analysis, design, and
+	% verification) with a particular focus on the control of engineered
+	% agents (e.g., for communications, control, software, electronics, and
+	% sustainability) and the analysis of biological phenomena (e.g.,
+	% self-organization, ecological rationality)
+	% \begin{innerlist}
+	% \item More information and auxiliary documents can be found at\\\url{http://www.tedpavlic.com/facjobsearch/}
+	% \end{innerlist}
+	
+	\section{Research Interests}
+	\begin{itemize}[topsep=0pt]
+		\setlength{\itemindent}{-.2in}
+		\itemsep-0.3em
+		\item Morphology in neural machine translation
+		\item Endangered and low-resource language varieties
+		\item Pragmatics and sociolinguistics
+	\end{itemize}
+	\section{Education}
+
+	{\textbf{Johns Hopkins University}},
+	Baltimore, MD
+	\begin{outerlist}[topsep=0pt]
+	\itemsep-0.3em
+	\item[] PhD student, Computer Science (Whiting School of Engineering).
+	\hfill \textbf{August 2018 - Present}
+	\item[] M.S.E., Computer Science (Whiting School of Engineering).
+	\hfill Expected \textbf{May 2020}
+	\item[] \textit{Affiliation}: Center for Language and Speech Processing.
+	\item[] \textit{Advisor}: David Yarowsky.\\
+	\end{outerlist}
+
+	{\textbf{University of Kentucky}},
+	Lexington, KY
+	\begin{outerlist}[topsep=0pt]
+		\itemsep-0.3em
+		\item[] B.S., Computer Science (College of Engineering). Honors.
+		\hfill \textbf{May 2018}
+		\item[] B.S., Linguistics (College of Arts \& Sciences), Honors.
+		\hfill \textbf{May 2018}
+		\item[] GPA: 4.0. \textit{Summa cum laude}.
+		\item[] \emph{Thesis}: Neural Machine Translation for Canadian French.
+	\end{outerlist}
+
+	\halfblankline
+		
+	\section{Research Experience}
+
+	{\textbf{Institutional Research \& Advanced Analytics, University of Kentucky}},
+	Lexington, KY\\
+		\textit{Research Assistant}
+		\hfill \textbf{May 2018 - August 2018}\\
+		Supervisors: Nathan Jacobs, Craig Rudick
+		\begin{innerlist}
+			\item Designed a system that, given a student's prior performance, would
+			predict their future grades course-by-course.
+			\item Implemented deep LSTMs and NLP techniques (e.g., learning word embeddings
+			on course descriptions) to learn student and course profiles.
+			\item Designed an ordinal loss function that observed not
+			just whether the grade was correct, but how close the prediction was to the real
+			grade.
+		\end{innerlist}
+
+	\halfblankline
+
+	{\textbf{University of Massachusetts Amherst}},
+	Amherst, MA\\
+		\textit{Research Assistant}%
+		\hfill \textbf{May 2017 - August 2017}\\
+		Supervisor: Brendan O'Connor
+		\begin{innerlist}
+			\item Collaborated with graduate students and faculty to improve an entity-event extraction system that, given
+news articles, uses distant supervision to extract the names of American citizens who have been killed by police.
+			\item Integrated existing entity mention and relation systems into pre-existing sentence-level model.
+			\item Integrated document-level information (e.g., noun coreference) as features in our system.
+		\end{innerlist}
+	
+	\halfblankline
+	
+	{\textbf{University of Kentucky}},
+	Lexington, KY\\
+		\textit{Juried Project}%
+		\hfill \textbf{August 2016 - May 2017}\\
+		Jurors: Hilaria Cruz, Raphael Finkel, Phil Harling
+		\begin{innerlist}
+			\item Preservation and revitalization of a low-resource indigenous language---Chatino---spoken natively by approximately 40,000 individuals.
+			\item Automatic speech recognition system creation and training with Sphinx.
+			\item Promotion and creation of Chatino language-learning resources, including open-source speech data, a speech corpus, and a website.
+		\end{innerlist}
+	
+	\halfblankline
+	
+		\textit{Directed Independent Research}
+		\hfill \textbf{September 2015 - May 2016}\\
+		Supervisor: Mark Richard Lauersdorf
+		\begin{innerlist}
+			\item Exploration of the manner in which societal perceptions and opinions of social gender and LGBT communities are expressed linguistically.
+			\item Application of corpus-based statistical methods to the analysis of diachronic sociolinguistic data.
+		\end{innerlist}
+	
+	\pagebreak
+	
+	{\textbf{Johns Hopkins University}},
+	Baltimore, MD\\
+		\textit{Research Assistant}%
+		\hfill \textbf{May 2016 - August 2016}\\
+		Supervisor: David Yarowsky
+		\begin{innerlist}
+			\item Collaborated with undergraduate and graduate students, post-doctoral researchers, and faculty to create automatic translation systems for low-resource languages under the specifications of DARPA's Low-Resource Languages for Emergent Incidents (LORELEI) program.
+			\item Assisted in the creation of a lemma-based translation model between English and Uyghur.
+			\item Built a morphological generator for Crimean Tatar.
+			\item Tokenized Uyghur-English parallel and monolingual corpora; created histograms for each.
+			\item Created parsers to extract translation tables from foreign editions of Wiktionary. 
+		\end{innerlist}
+
+	\section{Fellowships and Awards}
+
+	\textit{National Science Foundation Graduate Fellowship}
+	\hfill{\bf{August 2018 - May 2023}}\\
+		Awarded in recognition and support of graduate students in NSF-supported
+		disciplines who are pursuing research-based Master's and doctoral degrees
+		at U.S. institutions. (\$102,000+)
+	
+	\halfblankline
+	
+	\textit{Gaines Fellow}
+	\hfill{\bf{August 2016 - May 2018}}\\
+		Two-year fellowship awarded in recognition of undergraduates with outstanding academic performance, demonstrated ability to conduct undergraduate research, an interest in public issues, and a desire to enhance understanding of the human condition through the humanities. Requires the completion of a juried project, a major thesis project, and a seminar in the humanities. (\$5,000)
+	
+	\halfblankline
+
+	\textit{Raymond F. Betts Scholar}
+	\hfill{\bf{November 2017}}\\
+		Awarded to rising seniors conducting thesis research, especially if travel is
+		necessary. Used funds to study Québec French and in Montréal and Québec City during
+		winter of 2017--2018. (\$2,500)
+
+	\halfblankline
+
+	\textit{Patterson Scholar}
+	\hfill{\bf{August 2014 - May 2018}}\\
+		Granted to University of Kentucky students who have earned National Merit Finalist standing and who maintain a 3.300 cumulative GPA. (\$80,000+)
+
+	\halfblankline
+
+	\textit{Goldwater Scholarship (Honorable Mention)}
+	\hfill{\bf{March 2017}}\\
+	Awarded to outstanding college sophomores and juniors intending to pursue research careers in the natural sciences, mathematics, and engineering. Awardees and honorable mentions must have demonstrated excellence in and a clear commitment to research in their undergraduate studies, as well as clear plans to pursue research in the future.
+	
+	\halfblankline
+	
+	\textit{Phi Beta Kappa}
+	\hfill{\bf{March 2017}}\\
+	Selective national academic honors society promoting excellence in the liberal arts and sciences. Membership is typically awarded to less than the top 10\% of a university's class. 
+	
+	\halfblankline
+	
+	\textit{National Merit Scholar}
+	\hfill{\bf{May 2014}}\\
+		Nationally competitive scholarship awarded to high school students with exceptional PSAT scores. (\$2,000)
+	
+	\section{Selected Presentations}
+
+	Mueller, Aaron; Keith, Katherine; Handler, Abe; Blodgett, Su Lin; and O'Connor, Brendan. The Identification of Civilians Killed by Police with Supervised Entity-Event Extraction. \emph{2017 UMass Amherst Research Experience for Undergraduates (REU) Showcase}, Amherst, MA, August 9, 2017.
+
+	\halfblankline
+
+	Mueller, Aaron; Finkel, Raphael; and Cruz, Hilaria. Documenting and Promoting the Chatino Language and Orthography. \emph{Juried Presentation in Satisfaction of the Requirements of the Gaines Fellowship}, Lexington, KY, February 21, 2017.
+	
+	\halfblankline
+
+	Mueller, Aaron. A Lemma-Based Approach for English-Uyghur Statistical Machine Translation. \emph{9th Annual Conference of the Illinois Language and Linguistics Society (ILLS9)}, Urbana, IL, March 31--April 1, 2017.
+	
+	\halfblankline
+
+	Mueller, Aaron. Lexical and Semantic Shifts in the Linguistic Construction of Social Gender: A Corpus-Based Analysis of Written U.S. English. Poster.
+	\emph{9th Annual Toronto Undergraduate Linguistics Conference (TULCON9)}, Toronto, ON, March 4--6, 2016.
+	
+	\pagebreak
+
+	\section{Professional Experience}
+
+	{\textbf{Chellgren Center for Undergraduate Excellence}},
+	Lexington, KY\\
+		\textit{Student Outreach Team}
+		\hfill \textbf{August 2017 - May 2018}
+		\begin{innerlist}
+			\item Promote the importance of programs within the Chellgren Center, 
+			including the Office of Undergraduate Research and the Chellgren Fellowship.
+			\item Organize panel discussions, workshops, and lectures on
+			abstract writing, research poster design, and academic presentations.
+			\item On the review committee for our Showcase of Undergraduate Scholars,
+			an annual conference where University of Kentucky undergraduates present their
+			research to other students and faculty. Typically features 200+ presenters across
+			all disciplines.
+		\end{innerlist}
+
+	\halfblankline
+
+	{\textbf{UK Special Collections Research Center}},
+	Lexington, KY\\
+		\textit{Archiving Intern}%
+		\hfill \textbf{September 2015 - May 2016}
+		\begin{innerlist}
+			\item Made accessible an archival collection that highlights Lexington's architectural history---the Frankel and Curtis blueprints and papers.
+			\item Cooperated on a multiformat project that layered GIS technology, city government data, archival photos, and digital humanities tools.
+			\item Created a diachronic corpus of Lexingtonian architectural documentation which includes zoning ordinances and Lexington Planning Committee meeting minutes.
+		\end{innerlist}
+	
+	\section{Volunteer Service}
+	
+	\textbf{Amnesty International}
+	\hfill{\textbf{2012 - Present}}
+	\begin{innerlist}
+		\item International organization dedicated to the protection of human rights worldwide.
+		\item Member of Amnesty International at Johns Hopkins and Washington, D.C.
+		\item \textit{Founder} and former \textit{Co-President} of Amnesty International at the University of Kentucky.
+		\item Organize fundraisers and informational events: concerts featuring local bands, panel discussions on contemporary issues, faculty debates, petitions, protests, and more.
+		\item Attendee at Amnesty's national Human Rights Conference.
+	\end{innerlist}
+	
+	\halfblankline
+	
+	\textbf{Oxfam International}
+	\hfill{\textbf{2014 - Present}}
+	\begin{innerlist}
+		\item International organization dedicated to poverty eradication, disaster relief, and political advocacy for those facing harsh living conditions and injustice
+		worldwide.
+		\item Member of Oxfam in Washington, D.C.
+		\item \textit{Founder} and former \textit{Co-Coordinator} of Oxfam at the University of Kentucky.
+		\item Plan awareness-raising, fundraising, and petitioning events for Oxfam's GROW campaign with a distinct focus on food inequality in impoverished and war-stricken countries.
+	\end{innerlist}
+
+	\halfblankline
+	
+	\textbf{Society for the Promotion of Undergraduate Research}
+	\hfill{\textbf{2014 - 2017}}
+	\begin{innerlist}
+		\item University-of-Kentucky-based organization founded to assist undergraduates in finding research opportunities and in bettering their research.
+		\item \textit{Co-President} and former \textit{Director of Events}.
+		\item Plan and execute the Showcase of Undergraduate Scholars.
+		\item Plan research workshops to help undergraduates improve their abstracts, presentations, and papers.
+		\item Organize faculty panel discussions, promotional events, and information sessions on getting involved in undergraduate research and on scholarship and summer research opportunities.
+		\item Merged with the Student Outreach Team in May 2017 (joined upon merge).
+	\end{innerlist}
+
+	\section{Computing Skills}
+	
+	Computer Programming:
+	%
+	\begin{innerlist}
+		\item Languages: Python, C, C$+$$+$, Java, HTML, CSS, Javascript, \Matlab, R, UNIX shell scripting, GNU make.
+		\item Development Environments: Vim, Emacs, Eclipse.
+		\item Version Control: DVCS (Git, Bitbucket).
+		\item Machine Learning Toolkits: TensorFlow, Sockeye, Keras, PyTorch, OpenNMT.
+		\item Operating Systems: Linux (Debian, Ubuntu, CentOS, Arch), Microsoft Windows family, macOS, Android, iOS.
+	\end{innerlist}
+	
+	\halfblankline
+	
+	Linguistic Tools:
+	\begin{innerlist}
+		\item[] Praat, AntConc, QGIS, Audacity.
+	\end{innerlist}
+
+	\halfblankline
+	
+	Desktop Editing and Productivity Software:
+	%
+	\begin{innerlist}
+		\item \TeX{} (\LaTeX{}, \BibTeX{}).
+		\item GIMP, Inkscape.
+		\item Microsoft Office, OpenOffice.org, LibreOffice, G Suite.
+	\end{innerlist}
+
+	\section{Languages}
+	Fluent in English and French (Canadian). Rudimentary Inuktitut and Dutch.
+
+	\section{Interests and Hobbies}
+
+	\begin{itemize}[topsep=0pt]
+		\setlength{\itemindent}{-.2in}
+		\itemsep-0.3em
+		\item[--] Music: guitar (acoustic, classical, electric), bass, banjo,
+		synthesizer, MaxMSP, Ableton Live.
+		\item[--] Athletics: contra, swing dance, cold-weather hiking.
+		\item[--] Hobbies: natural language learning, reading (philosophy, politics), city exploration.
+		\item[--] Cooking: Thai, French, German, Southern.
+	\end{itemize}
+
+	%\section{References Available to Contact}
+	%
+	%\textbf{Dr. Mark Richard Lauersdorf}
+	%(e\-/mail:~lauersdorf@uky.edu; phone:~+1-859-257-7101)
+	%
+	%\begin{innerlist}
+	%	\item Associate Professor of Linguistics,
+	%	University of Kentucky
+		
+		%\item[$\diamond$] Linguistics Program,
+		%1215 Patterson Office Tower,
+		%University of Kentucky,
+		%Lexington, KY 40506-0027
+		
+	%	\item[$\star$] \emph{Dr.~Lauersdorf is a current thesis advisor, former sociolinguistics research advisor, and former professor of multiple classes of mine.}
+	%\end{innerlist}
+	
+	%\halfblankline
+	
+	%\textbf{Dr. Jerzy Jaromczyk}
+	%(e\-/mail:~jurek@cs.uky.edu; phone:~+1-859-257-1186)
+	%
+	%\begin{innerlist}
+	%	\item Associate Professor of Computer Science,
+	%	University of Kentucky
+		
+		%\item[$\diamond$] Davis Marksbury Building,
+		%329 Rose Street,
+		%Lexington, KY 40506-0633
+		
+	%	\item[$\star$] \emph{Dr.~Jaromczyk is a current computer science research advisor.}
+	%\end{innerlist}
+	
+	%\halfblankline
+	%
+	%\textbf{Dr. Hilaria Cruz}
+	%(e\-/mail:~hcr224@g.uky.edu)
+	%
+	%\begin{innerlist}
+	%	\item Lyman T. Johnson Postdoctoral Fellow,
+	%	University of Kentucky
+		
+		%\item[$\diamond$] Linguistics Program,
+		%1215 Patterson Office Tower,
+		%University of Kentucky,
+		%Lexington, KY 40506-0027
+		
+	%	\item[$\star$] \emph{Dr.~Cruz juried a language revitalization project of mine. She is a native speaker of Chatino, a low-resource indigenous language.}
+	%\end{innerlist}
+	
+	%\halfblankline
+	
+	% The ``More Info'' section may not be necessary; make sure it's short
+	% so it doesn't prevent people from seeing references available to
+	% contact.
+	%\section{More Information}
+	
+	%More information can be found at\\	\url{https://www.linkedin.com/in/aaron-mueller-8b9334104}.
+	
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------%
+% The following is copyright and licensing information for
+% redistribution of this LaTeX source code; it also includes a liability
+% statement. If this source code is not being redistributed to others,
+% it may be omitted. It has no effect on the function of the above code.
+%----------------------------------------------------------------------%
+% Copyright (c) 2007, 2008, 2009, 2010, 2011 by Theodore P. Pavlic
+%
+% Unless otherwise expressly stated, this work is licensed under the
+% Creative Commons Attribution-Noncommercial 3.0 United States License. To
+% view a copy of this license, visit
+% http://creativecommons.org/licenses/by-nc/3.0/us/ or send a letter to
+% Creative Commons, 171 Second Street, Suite 300, San Francisco,
+% California, 94105, USA.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+% OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+% IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+% CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+% TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+% SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
