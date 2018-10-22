@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.11)  11 OCT 2018 19:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.11)  20 OCT 2018 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -671,45 +671,40 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 359.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 365.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 366.
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 447.
+(Font)              <7> on input line 446.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 447.
+(Font)              <5> on input line 446.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (2.63925pt too wide) in paragraph at lines 550--551
-[]\T1/ptm/m/n/10 Made ac-ces-si-ble an archival col-lec-tion that high-lights L
-ex-ing-ton's ar-chi-tec-tural history---the Frankel
- []
 
-[3] 
 AED: lastpage setting LastPage
-[4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 695.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 695.
+[3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 690.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 690.
 
 (/home/aaron/notes/website/aaronmueller.github.io/files/cv/CurriculumVitae.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 695.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 695.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 690.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 690.
 Package rerunfilecheck Info: File `CurriculumVitae.out' has not changed.
-(rerunfilecheck)             Checksum: 27C2A05749210FC536741BED972DF407;583.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 695.
+(rerunfilecheck)             Checksum: A2242B8F9521D106762E2A6CCFEE7265;581.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 690.
  ) 
 Here is how much of TeX's memory you used:
- 6484 strings out of 493029
- 93856 string characters out of 6136234
+ 6483 strings out of 493029
+ 93850 string characters out of 6136234
  194317 words of memory out of 5000000
  9938 multiletter control sequences out of 15000+600000
  26857 words of font info for 29 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 33i,13n,43p,420b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,13n,43p,405b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
@@ -717,10 +712,10 @@ fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
 Output written on /home/aaron/notes/website/aaronmueller.github.io/files/cv/Cur
-riculumVitae.pdf (4 pages, 76637 bytes).
+riculumVitae.pdf (3 pages, 75123 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
+ 90 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
