@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.24)  29 OCT 2018 22:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.11.4)  8 NOV 2018 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,8 +683,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 446.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (0.2602pt too wide) in paragraph at lines 472--475
+\T1/ptm/m/n/10 Two-year fel-low-ship awarded to un-der-grad-u-ates with out-sta
+nd-ing aca-demic per-for-mance, demon-strated
+ []
 
+[2] 
 AED: lastpage setting LastPage
 [3]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 690.
@@ -699,8 +704,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 690.
  ) 
 Here is how much of TeX's memory you used:
  6483 strings out of 493029
- 93850 string characters out of 6136233
- 194318 words of memory out of 5000000
+ 93850 string characters out of 6136234
+ 194316 words of memory out of 5000000
  9938 multiletter control sequences out of 15000+600000
  26857 words of font info for 29 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
@@ -712,7 +717,7 @@ fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
 Output written on /home/aaron/notes/website/aaronmueller.github.io/files/cv/Cur
-riculumVitae.pdf (3 pages, 75130 bytes).
+riculumVitae.pdf (3 pages, 75111 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  79 compressed objects within 1 object stream
