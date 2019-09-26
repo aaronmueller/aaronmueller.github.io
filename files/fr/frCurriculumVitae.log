@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.21)  25 JUL 2019 09:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.21)  26 SEP 2019 10:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -695,21 +695,21 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 508.
+(hyperref)                removing `\\' on input line 521.
 
 [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 529.
+(hyperref)                removing `\\' on input line 542.
 
 
-Overfull \hbox (8.94972pt too wide) in paragraph at lines 551--552
+Overfull \hbox (8.94972pt too wide) in paragraph at lines 564--565
 []\T1/ptm/m/n/10 Coopérer sur un pro-jet mul-ti-mé-dia, dont les logi-ciels SIG
 , don-nées de mu-nic-i-pal-ité, pho-tos d'archives,
  []
 
 [3]
-Overfull \hbox (3.61925pt too wide) in paragraph at lines 618--619
+Overfull \hbox (3.61925pt too wide) in paragraph at lines 631--632
 []\T1/ptm/m/n/10 Français cana-dien (B2~C1), anglais (langue mater-nelle), inuk
 -ti-tut (rudi-men-taire). Ex-péri-ence en chatino
  []
@@ -717,25 +717,25 @@ Overfull \hbox (3.61925pt too wide) in paragraph at lines 618--619
 
 AED: lastpage setting LastPage
 [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 691.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 691.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 704.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 704.
 
 (/home/aaron/notes/website/aaronmueller.github.io/files/fr/frCurriculumVitae.au
 x)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 691.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 691.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 704.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 704.
 Package rerunfilecheck Info: File `frCurriculumVitae.out' has not changed.
-(rerunfilecheck)             Checksum: F0FDDE9C7ACF57917FCA5F4A27CE37CD;629.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 691.
+(rerunfilecheck)             Checksum: E8DFA1E335DB9186D70F8487EE5886BD;679.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 704.
  ) 
 Here is how much of TeX's memory you used:
- 6417 strings out of 492982
- 92985 string characters out of 6134895
+ 6437 strings out of 492982
+ 93385 string characters out of 6134895
  190708 words of memory out of 5000000
- 9906 multiletter control sequences out of 15000+600000
+ 9922 multiletter control sequences out of 15000+600000
  26857 words of font info for 29 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 34i,13n,43p,440b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,14n,43p,440b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/f
@@ -743,10 +743,10 @@ onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 Output written on /home/aaron/notes/website/aaronmueller.github.io/files/fr/frC
-urriculumVitae.pdf (4 pages, 85585 bytes).
+urriculumVitae.pdf (4 pages, 87691 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 
