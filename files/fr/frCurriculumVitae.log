@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  14 SEP 2020 11:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  10 OCT 2020 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -363,72 +363,71 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 377--378
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 395.
+(hyperref)                removing `\\' on input line 392.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 446.
+(Font)              <7> on input line 453.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 446.
+(Font)              <5> on input line 453.
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 532.
+(hyperref)                removing `\\' on input line 529.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 563.
+(hyperref)                removing `\\' on input line 559.
 
 
-Overfull \hbox (8.94972pt too wide) in paragraph at lines 585--586
+Overfull \hbox (8.94972pt too wide) in paragraph at lines 578--579
 []\T1/ptm/m/n/10 Coopérer sur un pro-jet mul-ti-mé-dia, dont les logi-ciels SIG
 , don-nées de mu-nic-i-pal-ité, pho-tos d'archives,
  []
 
-[3]
-Overfull \hbox (5.61975pt too wide) in paragraph at lines 652--653
-[]\T1/ptm/m/n/10 Français (B2; cana-dien), anglais (langue mater-nelle). Ex-pér
+
+Overfull \hbox (5.25986pt too wide) in paragraph at lines 635--636
+[]\T1/ptm/m/n/10 Français (B2, cana-dien), anglais (langue mater-nelle). Ex-pér
 i-ence en chatino et ouïghour par la recherche. 
  []
 
 
 AED: lastpage setting LastPage
-[4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 725.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 725.
+[3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 708.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 708.
  (./frCurriculumVitae.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 725.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 725.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 708.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 708.
 Package rerunfilecheck Info: File `frCurriculumVitae.out' has not changed.
-(rerunfilecheck)             Checksum: 8546CF2DA01D5BE031AE6CDAE5928C8F;746.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 725.
+(rerunfilecheck)             Checksum: 9BEA363D18D7FD2245F130B995254479;692.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 708.
  ) 
 Here is how much of TeX's memory you used:
- 6394 strings out of 480608
- 97791 string characters out of 5903631
+ 6391 strings out of 480608
+ 97778 string characters out of 5903631
  374355 words of memory out of 5000000
- 22157 multiletter control sequences out of 15000+600000
- 555869 words of font info for 40 fonts, out of 8000000 for 9000
+ 22156 multiletter control sequences out of 15000+600000
+ 553147 words of font info for 38 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 34i,13n,45p,440b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,13n,45p,440b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/f
-onts/type1/urw/times/utmri8a.pfb>
-Output written on frCurriculumVitae.pdf (4 pages, 82673 bytes).
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist
+/fonts/type1/urw/times/utmri8a.pfb>
+Output written on frCurriculumVitae.pdf (3 pages, 71884 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
- 25 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 24 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 
