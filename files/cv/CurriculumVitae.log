@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.11.17)  19 NOV 2021 14:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.11.17)  19 NOV 2021 14:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -329,18 +329,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 374--375
  []
 
 
-Overfull \hbox (5.41367pt too wide) in paragraph at lines 419--420
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+
+ []
+
+
+Overfull \hbox (5.41367pt too wide) in paragraph at lines 427--428
 []\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Mark Dredze. ``Fine-tuning En-coders for Im-proved Mono-lin-gual and Zero-shot Polylin-
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 432.
+(Font)              <7> on input line 439.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 432.
+(Font)              <5> on input line 439.
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-Overfull \hbox (3.6336pt too wide) in paragraph at lines 664--665
+Overfull \hbox (3.6336pt too wide) in paragraph at lines 673--674
 []\T1/ptm/m/n/10 Machine Learn-ing Toolk-its: Py-Torch (incl. Hug-ging-Face, fairseq, sock-eye), NLTK, Scikit-learn, numpy 
  []
 
@@ -353,13 +358,13 @@ Package rerunfilecheck Info: File `CurriculumVitae.out' has not changed.
 Here is how much of TeX's memory you used:
  9500 strings out of 478371
  150014 string characters out of 5848518
- 474501 words of memory out of 5000000
+ 473501 words of memory out of 5000000
  27468 multiletter control sequences out of 15000+600000
  424239 words of font info for 41 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 60i,13n,63p,430b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,63p,433b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CurriculumVitae.pdf (4 pages, 73131 bytes).
+Output written on CurriculumVitae.pdf (4 pages, 72985 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  104 compressed objects within 2 object streams
