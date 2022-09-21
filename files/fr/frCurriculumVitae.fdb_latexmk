@@ -1,5 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1589083174 "frCurriculumVitae.tex" "frCurriculumVitae.pdf" "frCurriculumVitae" 1589083175
+["pdflatex"] 1663802380 "/Users/aaronmueller/notes/aaronmueller.github.io/files/fr/frCurriculumVitae.tex" "/Users/aaronmueller/notes/aaronmueller.github.io/files/fr/frCurriculumVitae.pdf" "frCurriculumVitae" 1663802381
+  "/Users/aaronmueller/notes/aaronmueller.github.io/files/fr/frCurriculumVitae.aux" 1663802381 2106 fac8d284ccb74688f33a16ceb56c93bd ""
+  "/Users/aaronmueller/notes/aaronmueller.github.io/files/fr/frCurriculumVitae.tex" 1663802380 37262 25ba70297f30db4a9a07d969af519f4f ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1136768653 4524 6bce29db5bc272ba5f332261583fee9c ""
@@ -11,7 +13,6 @@
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm" 1136768653 4640 532ca3305aad10cc01d769f3f91f1029 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm" 1136768653 6944 94c55ad86e6ea2826f78ba2240d50df9 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
-  "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1136849748 44729 811d6c62865936705a31c797a1d5dada ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1136849748 46026 6dab18b61c907687b520c72847215a68 ""
@@ -72,11 +73,13 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1586288259 2432462 fd0fa20e9a3cb5f8169fd0ba1c955158 ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "frCurriculumVitae.aux" 1589083174 2092 84126c36889202363bbe946c3228007a "pdflatex"
-  "frCurriculumVitae.out" 1589083174 746 8546cf2da01d5be031ae6cdae5928c8f "pdflatex"
-  "frCurriculumVitae.tex" 1589083172 32319 0d470ee9160aaa44653833bcd0e4c51c ""
+  "frCurriculumVitae.aux" 1663802381 2106 fac8d284ccb74688f33a16ceb56c93bd "pdflatex"
+  "frCurriculumVitae.out" 1663802381 766 0323e6ff429bfa24279ca5b3dc348a1e "pdflatex"
+  "frCurriculumVitae.tex" 1663802380 37262 25ba70297f30db4a9a07d969af519f4f ""
   (generated)
   "frCurriculumVitae.log"
+  "/Users/aaronmueller/notes/aaronmueller.github.io/files/fr/frCurriculumVitae.log"
+  "frCurriculumVitae.aux"
+  "/Users/aaronmueller/notes/aaronmueller.github.io/files/fr/frCurriculumVitae.pdf"
   "frCurriculumVitae.out"
   "frCurriculumVitae.pdf"
-  "frCurriculumVitae.aux"
