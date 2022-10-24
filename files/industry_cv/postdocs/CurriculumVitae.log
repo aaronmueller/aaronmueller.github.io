@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.28)  24 OCT 2022 12:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.28)  24 OCT 2022 11:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/aaronmueller/notes/aaronmueller.github.io/files/fr/frCurriculumVitae.tex
-(/Users/aaronmueller/notes/aaronmueller.github.io/files/fr/frCurriculumVitae.tex
+**/Users/aaronmueller/notes/aaronmueller.github.io/files/industry_cv/postdocs/CurriculumVitae.tex
+(/Users/aaronmueller/notes/aaronmueller.github.io/files/industry_cv/postdocs/CurriculumVitae.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -223,8 +223,8 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count286
 \l__pdf_internal_box=\box51
-) (./frCurriculumVitae.aux)
-\openout1 = `frCurriculumVitae.aux'.
+) (./CurriculumVitae.aux)
+\openout1 = `CurriculumVitae.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 322.
 LaTeX Font Info:    ... okay on input line 322.
@@ -253,20 +253,20 @@ LaTeX Font Info:    ... okay on input line 322.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includemp 
-* h-part:(L,W,R)=(65.04256pt, 484.20988pt, 65.04256pt)
-* v-part:(T,H,B)=(65.04256pt, 664.88487pt, 65.04256pt)
+* h-part:(L,W,R)=(57.81621pt, 498.66258pt, 57.81621pt)
+* v-part:(T,H,B)=(57.81621pt, 679.33757pt, 57.81621pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=408.32619pt
-* \textheight=664.88487pt
-* \oddsidemargin=68.65627pt
-* \evensidemargin=68.65627pt
-* \topmargin=-44.22743pt
+* \textwidth=421.33318pt
+* \textheight=679.33757pt
+* \oddsidemargin=62.87563pt
+* \evensidemargin=62.87563pt
+* \topmargin=-51.45378pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=72.26999pt
+* \marginparwidth=73.7157pt
 * \marginparsep=3.61371pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
@@ -309,9 +309,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 322.
 LaTeX Info: Redefining \pageref on input line 322.
 LaTeX Info: Redefining \nameref on input line 322.
- (./frCurriculumVitae.out) (./frCurriculumVitae.out)
+ (./CurriculumVitae.out) (./CurriculumVitae.out)
 \@outlinefile=\write3
-\openout3 = `frCurriculumVitae.out'.
+\openout3 = `CurriculumVitae.out'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 323--325
@@ -322,54 +322,55 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 35
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 401.
+Overfull \hbox (10.35269pt too wide) in paragraph at lines 445--446
+[]\T1/ptm/m/n/10 Alexandra DeLu-cia, Shi-jie Wu, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Car-los Aguirre, Mark Dredze, Philip Resnik. ``\T1/ptm/m/sc/10 Bernice\T1/ptm/m/n/10 :
+ []
 
 
-Overfull \hbox (3.89957pt too wide) in paragraph at lines 409--410
-[]\T1/ptm/m/n/10 Recherche en méta-apprentissage aug-menté de récupéra-tion pour les sys-tèmes de questions-réponses
+Overfull \hbox (5.41367pt too wide) in paragraph at lines 447--448
+[]\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Mark Dredze. ``Fine-tuning En-coders for Im-proved Mono-lin-gual and Zero-shot Polylin-
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 450.
+(Font)              <7> on input line 448.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 450.
+(Font)              <5> on input line 448.
 [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (0.31992pt too wide) in paragraph at lines 461--462
-\T1/ptm/m/n/10 ``An Anal-y-sis of Mas-sively Mul-ti-lin-gual Neu-ral Ma-chine Trans-la-tion for Low-Resource Lan-guages.''
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (3.6336pt too wide) in paragraph at lines 672--673
+[]\T1/ptm/m/n/10 Machine Learn-ing Toolk-its: Py-Torch (incl. Hug-ging-Face, fairseq, sock-eye), NLTK, Scikit-learn, numpy 
  []
 
-[2] [3] 
+[3] 
 AED: lastpage setting LastPage
-[4] (./frCurriculumVitae.aux)
-Package rerunfilecheck Info: File `frCurriculumVitae.out' has not changed.
-(rerunfilecheck)             Checksum: E8527975993230C51839481DBEBB6F1F;1751.
+[4] (./CurriculumVitae.aux)
+Package rerunfilecheck Info: File `CurriculumVitae.out' has not changed.
+(rerunfilecheck)             Checksum: E29F15BDDC9180BBB064293F738C6F33;1499.
  ) 
 Here is how much of TeX's memory you used:
  9461 strings out of 478268
- 149416 string characters out of 5846347
- 466607 words of memory out of 5000000
- 27529 multiletter control sequences out of 15000+600000
+ 149438 string characters out of 5846347
+ 467598 words of memory out of 5000000
+ 27528 multiletter control sequences out of 15000+600000
  490068 words of font info for 42 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 60i,13n,63p,436b,476s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 60i,14n,63p,513b,476s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on frCurriculumVitae.pdf (4 pages, 75757 bytes).
+Output written on CurriculumVitae.pdf (4 pages, 71724 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
+ 123 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  105 words of extra memory for PDF output out of 10000 (max. 10000000)
 
