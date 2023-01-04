@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.28)  24 OCT 2022 11:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.28)  4 JAN 2023 16:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -30,33 +30,44 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@posthook=\toks17
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/inconsolata.sty
+Package: inconsolata 2019/05/17 v1.12
+ `inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks18
+\XKV@tempa@toks=\toks19
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count193
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\zifour@ocount=\count194
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count193
-\calc@Bcount=\count194
+\calc@Acount=\count195
+\calc@Bcount=\count196
 \calc@Adimen=\dimen139
 \calc@Bdimen=\dimen140
 \calc@Askip=\skip49
 \calc@Bskip=\skip50
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count195
+\calc@Ccount=\count197
 \calc@Cskip=\skip51
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/ncctools/extdash.sty
 Package: extdash 2018/06/24 v1.3 Extended Dash Package (NCC)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks18
-) (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count196
-\Gm@cntv=\count197
-\c@Gm@tempcnt=\count198
+\Gm@cnth=\count198
+\Gm@cntv=\count199
+\c@Gm@tempcnt=\count266
 \Gm@bindingoffset=\dimen141
 \Gm@wd@mp=\dimen142
 \Gm@odd@mp=\dimen143
@@ -65,23 +76,24 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layoutheight=\dimen146
 \Gm@layouthoffset=\dimen147
 \Gm@layoutvoffset=\dimen148
-\Gm@dimlist=\toks19
+\Gm@dimlist=\toks20
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
+\enitkv@toks@=\toks21
 \labelindent=\skip52
 \enit@outerparindent=\dimen149
-\enit@toks=\toks20
+\enit@toks=\toks22
 \enit@inbox=\box50
-\enit@count@id=\count199
-\enitdp@description=\count266
+\enit@count@id=\count267
+\enitdp@description=\count268
 )
 \bibhang=\skip53
 \bibsep=\skip54
-\enitdp@bibsection=\count267
-\c@bibenumi=\count268
-\c@bibenumii=\count269
-\c@bibenumiii=\count270
-\enitdp@bibenum=\count271
+\enitdp@bibsection=\count269
+\c@bibenumi=\count270
+\c@bibenumii=\count271
+\c@bibenumiii=\count272
+\enitdp@bibenum=\count273
  (/usr/local/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip55
@@ -97,15 +109,25 @@ Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footer
 Package: lastpage 2021/09/03 v1.2n Refers to last page's name (HMM; JPG)
 )
 \footpageshift=\skip64
- (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: pdftex.def on input line 149.
+Package xcolor Info: Driver file: pdftex.def on input line 227.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
-)) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
  (/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
@@ -133,8 +155,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen150
-\Hy@linkcounter=\count272
-\Hy@pagecounter=\count273
+\Hy@linkcounter=\count274
+\Hy@pagecounter=\count275
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -144,7 +166,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count274
+\Hy@SavedSpaceFactor=\count276
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -157,7 +179,7 @@ Package hyperref Info: Plain pages OFF on input line 4152.
 Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4390.
-\c@Hy@tempcnt=\count275
+\c@Hy@tempcnt=\count277
  (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -169,7 +191,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count276
+\Fld@menulength=\count278
 \Field@Width=\dimen152
 \Fld@charsize=\dimen153
 Package hyperref Info: Hyper figures OFF on input line 6027.
@@ -185,9 +207,9 @@ LaTeX Info: Redefining \pageref on input line 6101.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count277
-\c@Item=\count278
-\c@Hfootnote=\count279
+\Hy@abspage=\count279
+\c@Item=\count280
+\c@Hfootnote=\count281
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -196,8 +218,8 @@ File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count280
-\c@bookmark@seq@number=\count281
+\Fld@listcount=\count282
+\c@bookmark@seq@number=\count283
  (/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -207,44 +229,46 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip65
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 165.
-Package hyperref Info: Option `breaklinks' set `true' on input line 165.
-\enitdp@outerlist=\count282
-\enitdp@lonelist=\count283
-\enitdp@innerlist=\count284
-\enitdp@loneinnerlist=\count285
+Package hyperref Info: Option `colorlinks' set `true' on input line 166.
+Package hyperref Info: Option `breaklinks' set `true' on input line 166.
+\enitdp@outerlist=\count284
+\enitdp@lonelist=\count285
+\enitdp@innerlist=\count286
+\enitdp@loneinnerlist=\count287
  (/usr/local/texlive/2022/texmf-dist/tex/latex/doi/doi.sty
 Package: doi 2018/09/09 handle doi numbers
 )
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 322.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 327.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count286
+\l__color_backend_stack_int=\count288
 \l__pdf_internal_box=\box51
 ) (./CurriculumVitae.aux)
 \openout1 = `CurriculumVitae.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 322.
-LaTeX Font Info:    ... okay on input line 322.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 322.
-LaTeX Font Info:    ... okay on input line 322.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 322.
-LaTeX Font Info:    ... okay on input line 322.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 322.
-LaTeX Font Info:    ... okay on input line 322.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 322.
-LaTeX Font Info:    ... okay on input line 322.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 322.
-LaTeX Font Info:    ... okay on input line 322.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 322.
-LaTeX Font Info:    ... okay on input line 322.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 322.
-LaTeX Font Info:    ... okay on input line 322.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 322.
-LaTeX Font Info:    ... okay on input line 322.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -253,20 +277,20 @@ LaTeX Font Info:    ... okay on input line 322.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includemp 
-* h-part:(L,W,R)=(57.81621pt, 498.66258pt, 57.81621pt)
-* v-part:(T,H,B)=(57.81621pt, 679.33757pt, 57.81621pt)
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=421.33318pt
-* \textheight=679.33757pt
-* \oddsidemargin=62.87563pt
-* \evensidemargin=62.87563pt
-* \topmargin=-51.45378pt
+* \textwidth=392.06502pt
+* \textheight=650.43001pt
+* \oddsidemargin=77.69pt
+* \evensidemargin=77.69pt
+* \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=73.7157pt
+* \marginparwidth=74.0763pt
 * \marginparsep=3.61371pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
@@ -281,22 +305,22 @@ LaTeX Font Info:    ... okay on input line 322.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 322.
+(lastpage)             ! on input line 327.
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count287
+\scratchcounter=\count289
 \scratchdimen=\dimen154
 \scratchbox=\box52
-\nofMPsegments=\count288
-\nofMParguments=\count289
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count290
+\nofMPsegments=\count290
+\nofMParguments=\count291
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count292
 \MPscratchDim=\dimen155
-\MPnumerator=\count291
-\makeMPintoPDFobject=\count292
-\everyMPtoPDFconversion=\toks22
+\MPnumerator=\count293
+\makeMPintoPDFobject=\count294
+\everyMPtoPDFconversion=\toks24
 )
-Package hyperref Info: Link coloring ON on input line 322.
+Package hyperref Info: Link coloring ON on input line 327.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -304,73 +328,94 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count293
+\c@section@level=\count295
 )
-LaTeX Info: Redefining \ref on input line 322.
-LaTeX Info: Redefining \pageref on input line 322.
-LaTeX Info: Redefining \nameref on input line 322.
+LaTeX Info: Redefining \ref on input line 327.
+LaTeX Info: Redefining \pageref on input line 327.
+LaTeX Info: Redefining \nameref on input line 327.
  (./CurriculumVitae.out) (./CurriculumVitae.out)
 \@outlinefile=\write3
 \openout3 = `CurriculumVitae.out'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--325
+Underfull \hbox (badness 10000) in paragraph at lines 328--330
 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 359.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 333.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 333.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 365.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
 
- []
-
-
-Overfull \hbox (10.35269pt too wide) in paragraph at lines 445--446
-[]\T1/ptm/m/n/10 Alexandra DeLu-cia, Shi-jie Wu, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Car-los Aguirre, Mark Dredze, Philip Resnik. ``\T1/ptm/m/sc/10 Bernice\T1/ptm/m/n/10 :
- []
-
-
-Overfull \hbox (5.41367pt too wide) in paragraph at lines 447--448
-[]\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Mark Dredze. ``Fine-tuning En-coders for Im-proved Mono-lin-gual and Zero-shot Polylin-
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 448.
+(Font)              <7> on input line 416.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 448.
+(Font)              <5> on input line 416.
+
+Overfull \hbox (5.79106pt too wide) in paragraph at lines 440--441
+[]\T1/ptm/m/n/10 Implemented con-vo-lu-tional neu-ral ma-chine trans-la-tion mod-els ri-val-ing our prior seq2seq model's
+ []
+
 [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (3.6336pt too wide) in paragraph at lines 672--673
-[]\T1/ptm/m/n/10 Machine Learn-ing Toolk-its: Py-Torch (incl. Hug-ging-Face, fairseq, sock-eye), NLTK, Scikit-learn, numpy 
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (5.86159pt too wide) in paragraph at lines 470--471
+[]\T1/ptm/m/n/10 Matthew Fin-layson*, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 *, Se-bas-tian Gehrmann, Stu-art Shieber, Tal Linzen, Yonatan
+ []
+
+
+Overfull \hbox (1.41107pt too wide) in paragraph at lines 474--475
+[]\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Gar-rett Nico-lai, Panayiota Petrou-Zeniou, Na-talia Talmina, Tal Linzen. ``[][][]Cross-
+ []
+
+
+Overfull \hbox (6.42215pt too wide) in paragraph at lines 476--477
+[]\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Gar-rett Nico-lai, Arya D. Mc-Carthy, Dy-lan Lewis, Win-ston Wu, David Yarowsky.
+ []
+
+
+Overfull \hbox (6.42215pt too wide) in paragraph at lines 480--481
+[]\T1/ptm/m/n/10 Garrett Nico-lai, Dy-lan Lewis, Arya D. Mc-Carthy, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Win-ston Wu, David Yarowsky.
+ []
+
+[2]
+Overfull \hbox (0.57156pt too wide) in paragraph at lines 501--502
+[]\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Kanika Narang, Lam-bert Math-ias, Qi-fan Wang, Hamed Firooz. ``Meta-learning
  []
 
 [3] 
 AED: lastpage setting LastPage
 [4] (./CurriculumVitae.aux)
 Package rerunfilecheck Info: File `CurriculumVitae.out' has not changed.
-(rerunfilecheck)             Checksum: E29F15BDDC9180BBB064293F738C6F33;1499.
+(rerunfilecheck)             Checksum: 53B0D45FA9D8BBB107174EB817539B7D;1196.
  ) 
 Here is how much of TeX's memory you used:
- 9461 strings out of 478268
- 149438 string characters out of 5846347
- 467598 words of memory out of 5000000
- 27528 multiletter control sequences out of 15000+600000
- 490068 words of font info for 42 fonts, out of 8000000 for 9000
+ 10240 strings out of 478268
+ 160845 string characters out of 5846347
+ 480598 words of memory out of 5000000
+ 28277 multiletter control sequences out of 15000+600000
+ 506159 words of font info for 49 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 60i,14n,63p,513b,476s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CurriculumVitae.pdf (4 pages, 71724 bytes).
+ 60i,13n,80p,559b,477s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on CurriculumVitae.pdf (4 pages, 89460 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
+ 171 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
  35 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 
