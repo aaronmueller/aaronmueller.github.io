@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.28)  2 FEB 2023 17:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.28)  21 FEB 2023 11:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -373,33 +373,33 @@ Overfull \hbox (5.79106pt too wide) in paragraph at lines 440--441
 [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (5.86159pt too wide) in paragraph at lines 470--471
+Overfull \hbox (5.86159pt too wide) in paragraph at lines 459--460
 []\T1/ptm/m/n/10 Matthew Fin-layson*, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 *, Se-bas-tian Gehrmann, Stu-art Shieber, Tal Linzen, Yonatan
  []
 
 
-Overfull \hbox (1.41107pt too wide) in paragraph at lines 474--475
+Overfull \hbox (1.41107pt too wide) in paragraph at lines 463--464
 []\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Gar-rett Nico-lai, Panayiota Petrou-Zeniou, Na-talia Talmina, Tal Linzen. ``[][][]Cross-
  []
 
 
-Overfull \hbox (6.42215pt too wide) in paragraph at lines 476--477
+Overfull \hbox (6.42215pt too wide) in paragraph at lines 465--466
 []\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Gar-rett Nico-lai, Arya D. Mc-Carthy, Dy-lan Lewis, Win-ston Wu, David Yarowsky.
  []
 
 
-Overfull \hbox (6.42215pt too wide) in paragraph at lines 480--481
+Overfull \hbox (6.42215pt too wide) in paragraph at lines 469--470
 []\T1/ptm/m/n/10 Garrett Nico-lai, Dy-lan Lewis, Arya D. Mc-Carthy, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Win-ston Wu, David Yarowsky.
  []
 
 [2]
-Overfull \hbox (0.57156pt too wide) in paragraph at lines 499--500
+Overfull \hbox (0.57156pt too wide) in paragraph at lines 488--489
 []\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Kanika Narang, Lam-bert Math-ias, Qi-fan Wang, Hamed Firooz. ``Meta-learning
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 507.
+(hyperref)                removing `\\' on input line 496.
 
 [3] 
 AED: lastpage setting LastPage
@@ -410,13 +410,13 @@ Package rerunfilecheck Info: File `CurriculumVitae.out' has not changed.
 Here is how much of TeX's memory you used:
  10242 strings out of 478268
  160803 string characters out of 5846347
- 480599 words of memory out of 5000000
+ 481599 words of memory out of 5000000
  28278 multiletter control sequences out of 15000+600000
  506159 words of font info for 49 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 60i,13n,80p,541b,477s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 60i,13n,80p,541b,476s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CurriculumVitae.pdf (4 pages, 89567 bytes).
+Output written on CurriculumVitae.pdf (4 pages, 89364 bytes).
 PDF statistics:
  170 PDF objects out of 1000 (max. 8388607)
  152 compressed objects within 2 object streams
