@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.28)  16 AUG 2023 12:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.28)  19 SEP 2023 16:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -362,60 +362,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 391--392
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 416.
+(Font)              <7> on input line 432.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 416.
+(Font)              <5> on input line 432.
 
-Overfull \hbox (5.79106pt too wide) in paragraph at lines 440--441
+Overfull \hbox (5.79106pt too wide) in paragraph at lines 456--457
 []\T1/ptm/m/n/10 Implemented con-vo-lu-tional neu-ral ma-chine trans-la-tion mod-els ri-val-ing our prior seq2seq model's
  []
 
 [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (5.86159pt too wide) in paragraph at lines 467--468
+Overfull \hbox (5.86159pt too wide) in paragraph at lines 486--487
 []\T1/ptm/m/n/10 Matthew Fin-layson*, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 *, Se-bas-tian Gehrmann, Stu-art Shieber, Tal Linzen, Yonatan
  []
 
 
-Overfull \hbox (1.41107pt too wide) in paragraph at lines 471--472
+Overfull \hbox (1.41107pt too wide) in paragraph at lines 490--491
 []\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Gar-rett Nico-lai, Panayiota Petrou-Zeniou, Na-talia Talmina, Tal Linzen. ``[][][]Cross-
  []
 
-
-Overfull \hbox (6.42215pt too wide) in paragraph at lines 473--474
+[2]
+Overfull \hbox (6.42215pt too wide) in paragraph at lines 492--493
 []\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Gar-rett Nico-lai, Arya D. Mc-Carthy, Dy-lan Lewis, Win-ston Wu, David Yarowsky.
  []
 
 
-Overfull \hbox (6.42215pt too wide) in paragraph at lines 477--478
+Overfull \hbox (6.42215pt too wide) in paragraph at lines 496--497
 []\T1/ptm/m/n/10 Garrett Nico-lai, Dy-lan Lewis, Arya D. Mc-Carthy, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Win-ston Wu, David Yarowsky.
  []
 
-[2]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 503.
+(hyperref)                removing `\\' on input line 520.
 
 [3] [4] 
 AED: lastpage setting LastPage
 [5] (./CurriculumVitae.aux)
 Package rerunfilecheck Info: File `CurriculumVitae.out' has not changed.
-(rerunfilecheck)             Checksum: 2111241DF75270857C86B32ABE2CFC57;1188.
+(rerunfilecheck)             Checksum: A5C7F624DF691FE5AE222204882D13C0;1418.
  ) 
 Here is how much of TeX's memory you used:
- 10249 strings out of 478268
- 160858 string characters out of 5846347
+ 10251 strings out of 478268
+ 160882 string characters out of 5846347
  480599 words of memory out of 5000000
- 28279 multiletter control sequences out of 15000+600000
+ 28280 multiletter control sequences out of 15000+600000
  508927 words of font info for 51 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 60i,13n,80p,696b,477s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 60i,13n,80p,682b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CurriculumVitae.pdf (5 pages, 100407 bytes).
+Output written on CurriculumVitae.pdf (5 pages, 101053 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 177 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 
