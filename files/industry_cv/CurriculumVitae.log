@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.28)  1 NOV 2023 11:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.28)  20 SEP 2023 16:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/aaronmueller/notes/aaronmueller.github.io/files/cv/CurriculumVitae.tex
-(/Users/aaronmueller/notes/aaronmueller.github.io/files/cv/CurriculumVitae.tex
+**/Users/aaronmueller/notes/aaronmueller.github.io/files/industry_cv/CurriculumVitae.tex
+(/Users/aaronmueller/notes/aaronmueller.github.io/files/industry_cv/CurriculumVitae.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -352,69 +352,69 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 36
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 434.
+(Font)              <7> on input line 417.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 434.
+(Font)              <5> on input line 417.
 
-Overfull \hbox (5.79106pt too wide) in paragraph at lines 458--459
+Overfull \hbox (5.79106pt too wide) in paragraph at lines 441--442
 []\T1/ptm/m/n/10 Implemented con-vo-lu-tional neu-ral ma-chine trans-la-tion mod-els ri-val-ing our prior seq2seq model's
  []
 
 [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (5.86159pt too wide) in paragraph at lines 488--489
+Overfull \hbox (5.86159pt too wide) in paragraph at lines 471--472
 []\T1/ptm/m/n/10 Matthew Fin-layson*, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 *, Se-bas-tian Gehrmann, Stu-art Shieber, Tal Linzen, Yonatan
  []
 
 
-Overfull \hbox (1.41107pt too wide) in paragraph at lines 492--493
+Overfull \hbox (1.41107pt too wide) in paragraph at lines 475--476
 []\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Gar-rett Nico-lai, Panayiota Petrou-Zeniou, Na-talia Talmina, Tal Linzen. ``[][][]Cross-
  []
 
-[2]
-Overfull \hbox (6.42215pt too wide) in paragraph at lines 494--495
+
+Overfull \hbox (6.42215pt too wide) in paragraph at lines 477--478
 []\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Gar-rett Nico-lai, Arya D. Mc-Carthy, Dy-lan Lewis, Win-ston Wu, David Yarowsky.
  []
 
-
-Overfull \hbox (6.42215pt too wide) in paragraph at lines 498--499
+[2]
+Overfull \hbox (6.42215pt too wide) in paragraph at lines 481--482
 []\T1/ptm/m/n/10 Garrett Nico-lai, Dy-lan Lewis, Arya D. Mc-Carthy, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Win-ston Wu, David Yarowsky.
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 524.
+(hyperref)                removing `\\' on input line 505.
 
-[3] [4] 
+[3] 
 AED: lastpage setting LastPage
-[5] (./CurriculumVitae.aux)
+[4] (./CurriculumVitae.aux)
 Package rerunfilecheck Info: File `CurriculumVitae.out' has not changed.
-(rerunfilecheck)             Checksum: D69BEA9DB8BEEDC203BF12B60535CD60;1418.
+(rerunfilecheck)             Checksum: CAE0FD3C920E0AD092555D918E0936EA;1332.
  ) 
 Here is how much of TeX's memory you used:
- 10250 strings out of 478268
- 160883 string characters out of 5846347
- 480621 words of memory out of 5000000
- 28280 multiletter control sequences out of 15000+600000
- 506159 words of font info for 49 fonts, out of 8000000 for 9000
+ 10248 strings out of 478268
+ 160879 string characters out of 5846347
+ 480599 words of memory out of 5000000
+ 28279 multiletter control sequences out of 15000+600000
+ 508927 words of font info for 51 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 60i,13n,80p,682b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CurriculumVitae.pdf (5 pages, 92841 bytes).
+ 60i,13n,80p,691b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on CurriculumVitae.pdf (4 pages, 103083 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
- 177 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 190 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 
