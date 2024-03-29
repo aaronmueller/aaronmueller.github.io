@@ -1,0 +1,330 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="" />
+    <meta property="og:title" content="Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models" />
+    <meta property="og:url" content="https://features.baulab.info/" />
+    <meta property="og:image" content="https://features.baulab.info/images/features-thumb.png" />
+    <meta property="og:description" content="We can automatically discover circuits of interpretable components and apply them to remove sensitivity to unintended signals.">
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models" />
+    <meta name="twitter:description"
+        content="Understanding the internal computations of huge autoregressive transformer neural network language models during in-context learning." />
+    <meta name="twitter:image" content="https://functions.baulab.info/images/fv-thumb.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        .relatedthumb {
+            float: left;
+            width: 200px;
+            margin: 3px 10px 7px 0;
+        }
+
+        .relatedblock {
+            clear: both;
+            display: inline-block;
+        }
+
+        .bold-sc {
+            font-variant: small-caps;
+            font-weight: bold;
+        }
+
+        .cite,
+        .citegroup {
+            margin-bottom: 8px;
+        }
+
+        :target {
+            background-color: yellow;
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD12LWN557"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date()); gtag('config', 'G-FD12LWN557');
+    </script>
+
+</head>
+
+<body class="nd-docs">
+    <div class="nd-pageheader">
+        <div class="container">
+            <h1 class="lead">
+                <nobr class="widenobr">Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models</nobr>
+            </h1>
+            <address>
+                <nobr><a href="https://people.math.harvard.edu/~smarks/" target="_blank">Samuel Marks</a><sup>1</sup>,</nobr>
+                <nobr><a href="https://de.linkedin.com/in/canrager" target="_blank">Can Rager</a><sup>2</sup>,</nobr>
+                <nobr><a href="https://ericjmichaud.com" target="_blank">Eric J. Michaud</a><sup>3</sup>,</nobr>
+                <nobr><a href="https://belinkov.com" target="_blank">Yonatan Belinkov</a><sup>4</sup>,</nobr>
+                <nobr><a href="https://baulab.info" target="_blank">David Bau</a><sup>1</sup>,</nobr>
+                <nobr><a href="https://aaronmueller.github.io" target="_blank">Aaron Mueller</a><sup>1</sup></nobr><br>
+                <nobr><sup>1</sup><a href="https://khoury.northeastern.edu/" target="_blank">Northeastern University</a>,</nobr>
+                <nobr><sup>2</sup>Independent,</nobr>
+                <nobr><sup>3</sup><a href="https://physics.mit.edu/" target="_blank">MIT</a>,</nobr>
+                <nobr><sup>4</sup><a href="https://www.cs.technion.ac.il/" target="_blank">The Technion</a></nobr>
+            </address>
+        </div>
+    </div><!-- end nd-pageheader -->
+
+    <div class="container">
+        <div class="row justify-content-center" style="margin-bottom: 20px">
+        </div>
+        <div class="row justify-content-center text-center">
+
+            <p>
+                <a href="https://arxiv.org/pdf/2403.19647.pdf" class="d-inline-block p-3 align-top" target="_blank">
+                    <img height="100" width="78" src="images/paper-thumb.png" style="border:1px solid; margin: 0 38px;"
+                        alt="ArXiv Preprint thumbnail" data-nothumb="">
+                    <br>ArXiv<br>Preprint</a>
+                <a href="https://github.com/ericwtodd/function_vectors" class="d-inline-block p-3 align-top" target="_blank">
+                    <img height="100" width="78" src="images/code-thumb.png" style="border:1px solid; margin: 0 38px;"
+                        alt="Github code thumbnail" data-nothumb="">
+                    <br>Source<br>Code<br></a>
+                <a href="https://feature-circuits.xyz/" class="d-inline-block p-3 align-top" target="_blank">
+                    <img height="100" width="78" src="images/cluster-thumb.png" style="border:1px solid; margin: 0 38px;"
+                        alt="Clusters Demo thumbnail" data-nothumb="">
+                    <br>Clusters<br>Demo<br></a>
+            </p>
+
+            <div class="card" style="max-width: 1020px;">
+                <div class="card-block">
+                <h3>Can we understand and edit unanticipated mechanisms in LMs?</h3>
+                <p style="text-align: justify;">
+                    We introduce methods for discovering and applying sparse feature circuits.
+                    These are causally implicated subnetworks of human-interpretable features for explaining language
+                    model behaviors. Circuits identified in prior work consist of polysemantic and difficult-to-interpret
+                    units like attention heads or neurons, rendering them unsuitable for many downstream applications. In contrast,
+                    sparse feature circuits enable detailed understanding of unanticipated mechanisms. Because they are based on fine-grained units,
+                    sparse feature circuits are useful for downstream tasks: We introduce SHIFT, where we improve the generalization of a
+                    classifier by ablating features that a human judges to be task-irrelevant. Finally, we demonstrate an
+                    entirely unsupervised and scalable interpretability pipeline by discovering thousands of sparse featur
+                    circuits for automatically discovered model behaviors.
+                </p>
+                </div><!--card-block-->
+                </div><!--card-->
+
+        </div><!--row-->
+
+        <div class="row">
+            <div class="col">
+                
+                
+                <figure class="center_image" style="margin-top: 30px">
+                    <img src="images/Paper/outline.png" style="width:100%">
+                    <figcaption>
+                        Overview. Given contrastive input pairs, classification data,
+                        or automatically discovered model behaviors, we discover circuits
+                        composed of human-interpretable sparse features to explain their
+                        underlying mechanisms. We then label each feature according to what
+                        it activates on or causes to happen. Finally, if desired, we can
+                        ablate spurious features out of the circuit to modify how the
+                        system generalizes.
+                    </figcaption>
+                </figure>
+
+                <br>
+                
+                <h2>How do we discover sparse feature circuits?</h2>
+                We fold autoencoders into a language model's computation, and then causally implicate human-interpretable autoencoder neurons
+                ("<b>features</b>") in producing an LM prediction.
+                
+                <figure class="center_image" style="margin-top: 30px">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/paper/method.png" style="width:100%">
+                        </div>
+                    </div>  
+                    <figcaption>
+                        <!-- Attribution patching. To estimate the indirect effect (IE) of a feature on the target metric m, we
+                        take the gradient of a feature's activation w.r.t. m. We then multiply this by the difference in
+                        activations of the feature when given a "clean" input versus a "patch" input (where the target answer
+                        flips between these two inputs). -->
+                        Overview of our method. We view our model as a computation graph that includes sparse autoencoder (SAE)
+                        features and errors. We cache activations (Step 1) and compute gradients (Step 2) for each node. We then compute
+                        approximate indirect effects (IEs) using these values, and filter out nodes whose IEs
+                        are below a node threshold that we set (Step 3). We similarly compute and filter edges (Step 4); see paper for details.
+                    </figcaption>
+                </figure>
+
+                Here's an example sparse feature circuit for subject-verb agreement across a relative clause. We annotate each feature and then condense it 
+                into distinct feature groups by function.
+                <figure class="center_image" style="margin-top: 30px">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/paper/agreement-circuit.png" style="width:75%">
+                        </div>
+                    </div>  
+                    <figcaption>
+                        Summary of the circuit for agreement across RC (full circuit in the paper). The model
+                        detects the number of the subject. Then, it detects the start of a PP/RC modifying the subject.
+                        Verb form discriminators promote particular verb inflections (singular or plural). Squares
+                        show number of feature nodes in the group and triangles show number of SAE error nodes,
+                        with the shading indicating the sum of indirect effect terms across nodes in the group.
+                    </figcaption>
+                </figure>
+
+
+                <!--
+                    We use attribution patching to quickly estimate the causal contribution of all sparse features on a metric <span class="mathcal" style="font-family: 'Lucida Calligraphy', 'Monotype Corsiva', 'URW Chancery L', 'Apple Chancery', 'Tex Gyre Chorus', cursive, serif; font-size:19px">m</span>.
+                    Our metric is the logit difference between minimally different possible completions to a sentence: <span style="font-family:'Times New Roman'; font-size:19px"><i>x</i></span> by summing up the task-conditioned average output of each of these causal attention heads into a single vector <span style="font-family:'Times New Roman'; font-size:19px"><i>v<sub>t</sub></i></span>. 
+                    <br><br>
+                    Nodes whose estimated IEs are below a threshold we set are filtered from the circuit. Then, we compute and filter edges (details in the paper).
+                -->
+                <br>
+
+                <h2>Surgically improving the generalization of a classifier with <font style="font-variant: small-caps"><b>Shift</b></font></h3>
+                Sometimes, LMs pick up on predictive but incorrect signals when performing a task.
+                How can we remove a model's reliance on these signals if we don't know what those signals are ahead of time?
+                We propose <font style="font-variant: small-caps"><b>Shift</b></font> to tackle this problem.
+                <br><br>
+                To perform <font style="font-variant: small-caps"><b>Shift</b></font>, we first discover a feature circuit for a task. Then, we manually inspect each feature, ablating out the features
+                which are not relevant to the task. Here, we use the task of classifing <font color="#3E74D1">profession</font>
+                given someone's biography. The spurious/unintended signal is <font color="#E22146">gender</font>. We
+                create a worst-case scenario by subsampling the dataset such that <font color="#E22146">gender</font> is perfectly predictive of the target
+                label. <font style="font-variant: small-caps"><b>Shift</b></font> achieves the same performance as training directly on a balanced dataset, where gender no longer
+                predicts the target label (Oracle).
+                
+                <figure class="center_image" style="margin-top: 30px">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/paper/SHIFT.png" style="width:65%">
+                        </div>
+                    </div>  
+                    <figcaption>
+                        Accuracies on balanced data for the intended label (<font color="#3E74D1">profession</font>)
+                        and unintended label (<font color="#E22146">gender</font>). "Worst group accuracy" refers to whichever
+                        <font color="#3E74D1">profession</font> accuracy is lowest among female professors, male professors, female nurses,
+                        and male nurses.
+                    </figcaption>
+                </figure>
+
+                <br>
+
+                <h2>A fully unsupervised and scalable interpretability pipeline</h2>
+
+                Here, we show that we can use sparse feature circuits to understand unanticipated mechanisms
+                in automatically discovered behaviors. We discover circuits for thousands of behaviors derived
+                using activation and gradient clustering (you can observe and download these clusters <a href="https://feature-circuits.xyz/">here</a>).
+
+                <figure class="center_image" style="margin-top: 30px">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/paper/clusters.png" style="width:100%">
+                        </div>
+                    </div>  
+                    <figcaption>
+                        Example clusters and features which participate in their circuits. Features are
+                        active on tokens shaded in blue and promote tokens shaded in red. (<emph>left</emph>) An example <emph>narrow</emph> induction feature recognizes the pattern
+                        "A3... A3" and copies information from the first 3 token. This composes with a succession feature to implement the
+                        prediction "A3... A4". (<emph>right</emph>) One feature promotes "to" after words which can take infinitive objects. A separate feature
+                        activates on objects of verbs or prepositions and promotes "to" as an object complement.
+                    </figcaption>
+                </figure>
+
+                <br>
+
+                <!-- <h2>Related Work</h2> -->
+
+
+                <h2>Feature Disentanglement</h2>
+                <p>Our work builds upon insights in other work that has examined
+                    disentangling interpretable features from hard-to-interpret neural latent spaces:</p>
+
+                <p class="citation"><a href="https://transformer-circuits.pub/2023/monosemantic-features"><img src="images/bricken-2023.png" alt="bricken-2023">Trenton Bricken*, Adly Templeton*, Joshua Batson*, Brian Chen*, Adam Jermyn*, Tom Conerly, Nicholas L Turner, Cem Anil, Carson Denison, Amanda Askell, Robert Lasenby, Yifan Wu, Shauna Kravec, Nicholas Schiefer, Tim Maxwell, Nicholas Joseph, Alex Tamkin, Karina Nguyen, Brayden McLean, Josiah E Burke, Tristan Hume, Shan Carter, Tom Henighan, Chris Olah. Towards Monosemanticity: Decomposing Language Models With Dictionary Learning. 2023.</a><br>
+                <b>Notes:</b> Leverages sparse autoencoders to decompose <b>polysemantic</b> neurons into <b>monosemantic</b> sparse features.
+                </p>                
+                
+                <p class="citation"><a href="https://arxiv.org/abs/2309.08600"><img src="images/cunningham-2024.png" alt="cunningham-2024">Hoagy Cunningham, Aidan Ewart, Logan Riggs, Robert Huben, Lee Sharkey. Sparse Autoencoders Find Highly Interpretable Features in Language Models. 2024.</a><br>
+                <b>Notes:</b> Examines the behavior of attention heads in ICL contexts with false demonstrations present. Identifies and corrects "overthinking" behavior where incorrect information forward is otherwise copied forward from context.
+                </p>
+                
+                <h2>Causal Interpretability</h2>
+                <p>Our work builds upon insights from work aiming to causally implicate components or subgraphs
+                    of LMs in performing a given task:
+                </p>
+
+
+                
+                <h2>Robustness to Spurious Correlations</h2>
+                <
+                
+
+                
+
+	
+                <h2>How to cite</h2>
+
+                <p>The paper can be cited as follows.
+                </p>
+
+                <div class="card">
+                    <h3 class="card-header">bibliography</h3>
+                    <div class="card-block">
+                        <p style="text-indent: -3em; margin-left: 3em;" class="card-text clickselect">
+                        Samuel Marks, Can Rager, Eric J. Michaud, Yonatan Belinkov, David Bau, and Aaron Mueller. "<em>Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models.</em>" Computing Research Repository, <nobr>arXiv:2403.19647</nobr> (2024).
+                        </p>
+                    </div>
+                    <h3 class="card-header">bibtex</h3>
+                    <div class="card-block">
+                        <pre class="card-text clickselect">
+@article{marks2024feature,
+    title={Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models}, 
+    author={Samuel Marks and Can Rager and Eric J. Michaud and Yonatan Belinkov and David Bau and Aaron Mueller},
+    journal={Computing Research Repository},
+    volume={arXiv:2403.19647},
+    url={https://arxiv.org/abs/2403.19647},
+    year={2024},
+}</pre>
+                    </div>
+                </div>
+                <!-- </p> -->
+
+            <!-- </div> -->
+            </div> <!--col -->    
+        </div> <!--row -->
+    </div> <!-- container -->
+
+    
+
+    <footer class="nd-pagefooter">
+        <div class="row">
+            <div class="col-6 col-md text-center">
+                <a href="https://baulab.info/">About the Bau Lab</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    $(document).on('click', '.clickselect', function (ev) {
+        var range = document.createRange();
+        range.selectNodeContents(this);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+    });
+</script>
+
+</html>
