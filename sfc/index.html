@@ -16,7 +16,7 @@
     <meta name="twitter:title" content="Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models" />
     <meta name="twitter:description"
         content="Understanding the internal computations of huge autoregressive transformer neural network language models during in-context learning." />
-    <meta name="twitter:image" content="https://functions.baulab.info/images/fv-thumb.png" />
+    <meta name="twitter:image" content="https://features.baulab.info/images/fv-thumb.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -106,6 +106,10 @@
                     <img height="100" width="78" src="images/cluster-thumb.png" style="border:1px solid; margin: 0 38px;"
                         alt="Clusters Demo thumbnail" data-nothumb="">
                     <br>Clusters<br>Demo<br></a>
+                <a href="https://www.neuronpedia.org/p70d-sm" class="d-inline-block p-3 align-top" target="_blank">
+                    <img height="100" width="78" src="images/neuronpedia-thumb.png" style="border:1px solid; margin: 0 38px;"
+                        alt="Features Demo thumbnail" data-nothumb="">
+                    <br>Interactive<br>Features<br>Demo<br></a>
             </p>
 
             <div class="card" style="max-width: 1020px;">
@@ -247,9 +251,22 @@
 
                 <!-- <h2>Related Work</h2> -->
 
+                
+                <h2>Causal Interpretability</h2>
+                <p>Our work builds upon insights from work that causally implicates components or subgraphs
+                    in model behaviors:
+                </p>
+
+                <p class="citation"><a href="https://openreview.net/pdf?id=NpsVSN6o4ul"><img src="images/wang-2023.png" alt="wang-2023">Kevin Wang*, Alexandre Variengien*, Arthur Conmy*, Buck Shlegeris, Jacob Steinhardt. Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 Small. 2023.</a><br>
+                    <b>Notes:</b> Proposes path patching to causally implicate subnetworks in observed model behaviors. Localizes indirect object prediction to a subset of model components.
+                    </p>  
+                
+                <p class="citation"><a href="https://arxiv.org/abs/2303.02536"><img src="images/geiger-2023.png" alt="geiger-2023">Atticus Geiger, Zhengxuan Wu, Christopher Potts, Thomas Icard, Noah D. Goodman. Finding Alignments Between Interpretable Causal Variables and Distributed Neural Representations. 2024.</a><br>
+                    <b>Notes:</b> Discovers alignments between hypothesized causal graphs and subgraphs in neural networks for performing a given task.
+                    </p>  
 
                 <h2>Feature Disentanglement</h2>
-                <p>Our work builds upon insights in other work that has examined
+                <p>Our work directly builds upon insights in other work that has examined
                     disentangling interpretable features from hard-to-interpret neural latent spaces:</p>
 
                 <p class="citation"><a href="https://transformer-circuits.pub/2023/monosemantic-features"><img src="images/bricken-2023.png" alt="bricken-2023">Trenton Bricken*, Adly Templeton*, Joshua Batson*, Brian Chen*, Adam Jermyn*, Tom Conerly, Nicholas L Turner, Cem Anil, Carson Denison, Amanda Askell, Robert Lasenby, Yifan Wu, Shauna Kravec, Nicholas Schiefer, Tim Maxwell, Nicholas Joseph, Alex Tamkin, Karina Nguyen, Brayden McLean, Josiah E Burke, Tristan Hume, Shan Carter, Tom Henighan, Chris Olah. Towards Monosemanticity: Decomposing Language Models With Dictionary Learning. 2023.</a><br>
@@ -257,18 +274,21 @@
                 </p>                
                 
                 <p class="citation"><a href="https://arxiv.org/abs/2309.08600"><img src="images/cunningham-2024.png" alt="cunningham-2024">Hoagy Cunningham, Aidan Ewart, Logan Riggs, Robert Huben, Lee Sharkey. Sparse Autoencoders Find Highly Interpretable Features in Language Models. 2024.</a><br>
-                <b>Notes:</b> Examines the behavior of attention heads in ICL contexts with false demonstrations present. Identifies and corrects "overthinking" behavior where incorrect information forward is otherwise copied forward from context.
+                <b>Notes:</b> Contemporaneous sparse autoencoder dictionary work. This paper introduces a parentheses matching feature-based algorithm which inspired our work.
                 </p>
-                
-                <h2>Causal Interpretability</h2>
-                <p>Our work builds upon insights from work aiming to causally implicate components or subgraphs
-                    of LMs in performing a given task:
-                </p>
-
 
                 
                 <h2>Robustness to Spurious Correlations</h2>
-                <
+                <p>There is a large literature on mitigating robustness
+                    to spurious correlations:</p>
+                
+                <p class="citation"><a href="https://openreview.net/pdf?id=awIpKpwTwF"><img src="images/belrose-2023.png" alt="belrose-2024">Nora Belrose, David Schneider-Joseph, Shauli Ravfogel, Ryan Cotterell, Edward Raff, Stella Biderman. LEACE: Perfect linear concept erasure in closed form. 2023.</a><br>
+                    <b>Notes:</b> Proposes a method for erasing concepts. Belrose et al. apply LEACE to reduce gender bias.
+                    </p>
+                
+                <p class="citation"><a href="https://openreview.net/pdf?id=awIpKpwTwF"><img src="images/gandelsman-2024.png" alt="gandelsman-2024">Yossi Gandelsman, Alexei A. Efros, Jacob Steinhardt. Interpreting CLIP's Image Representation via Text-Based Decomposition. 2024.</a><br>
+                    <b>Notes:</b> Proposes a method for interpreting and ablating undesired attention heads in CLIP.
+                    </p>
                 
 
                 
