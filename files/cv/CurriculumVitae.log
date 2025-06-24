@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.5)  8 NOV 2024 20:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.5)  24 JUN 2025 12:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -345,7 +345,7 @@ File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 10.0pt on input line 333.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 366.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 365.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -354,71 +354,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 384--385
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
+Underfull \hbox (badness 10000) in paragraph at lines 391--393
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 434.
+(Font)              <7> on input line 442.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 434.
+(Font)              <5> on input line 442.
 
-Overfull \hbox (5.79106pt too wide) in paragraph at lines 458--459
+Overfull \hbox (5.79106pt too wide) in paragraph at lines 466--467
 []\T1/ptm/m/n/10 Implemented con-vo-lu-tional neu-ral ma-chine trans-la-tion mod-els ri-val-ing our prior seq2seq model's
  []
 
 [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}]
-Overfull \hbox (0.2214pt too wide) in paragraph at lines 472--473
-[]\T1/ptm/m/n/10 Aruna Sankara-narayanan, Dy-lan Hadfield-Menell, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 . ``[][][]Dis-joint Pro-cess-ing Mech-
+Overfull \hbox (2.52184pt too wide) in paragraph at lines 474--475
+[]\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 *, At-ti-cus Geiger*, Sarah Wiegr-effe, Dana Arad, Iván Ar-cuschin, Adam Belfki,
  []
 
 [2]
-Overfull \hbox (5.86159pt too wide) in paragraph at lines 496--497
-[]\T1/ptm/m/n/10 Matthew Fin-layson*, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 *, Se-bas-tian Gehrmann, Stu-art Shieber, Tal Linzen, Yonatan
- []
-
-
-Overfull \hbox (1.41107pt too wide) in paragraph at lines 500--501
+Overfull \hbox (8.081pt too wide) in paragraph at lines 518--519
 []\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Gar-rett Nico-lai, Panayiota Petrou-Zeniou, Na-talia Talmina, Tal Linzen. ``[][][]Cross-
  []
 
 
-Overfull \hbox (6.42215pt too wide) in paragraph at lines 502--503
+Overfull \hbox (13.09207pt too wide) in paragraph at lines 520--521
 []\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Gar-rett Nico-lai, Arya D. Mc-Carthy, Dy-lan Lewis, Win-ston Wu, David Yarowsky.
  []
 
-
-Overfull \hbox (6.42215pt too wide) in paragraph at lines 506--507
+[3]
+Overfull \hbox (13.09207pt too wide) in paragraph at lines 524--525
 []\T1/ptm/m/n/10 Garrett Nico-lai, Dy-lan Lewis, Arya D. Mc-Carthy, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Win-ston Wu, David Yarowsky.
  []
 
+[4]
 
-Overfull \hbox (8.66174pt too wide) in paragraph at lines 528--529
-[]\T1/ptm/m/n/10 Ethan Gotlieb Wilcox, Michael Hu, \T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 , Tal Linzen, Alex Warstadt, Leshem Choshen,
- []
-
-[3]
-Overfull \hbox (6.03232pt too wide) in paragraph at lines 530--531
-[]\T1/ptm/m/n/10 Jaden Fiotto-Kaufman, Alexan-der R. Lof-tus, Eric Todd, Jan-nik Brinkmann, Ca-den Juang, Koyena
- []
-
-
-Overfull \hbox (9.19037pt too wide) in paragraph at lines 539--540
-\T1/ptm/m/n/10 BabyLM Chal-lenge: Sample-efficient Pre-train-ing on De-vel-op-men-tally Plau-si-ble Cor-pora[][][].'' Shared
- []
-
-
-Overfull \hbox (0.21149pt too wide) in paragraph at lines 552--553
-[]\T1/ptm/b/n/10 Aaron Mueller\T1/ptm/m/n/10 . ``Emer-gent Syn-tac-tic Be-hav-iors and Mech-a-nisms in Neu-ral Lan-guage [].''
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 597.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 555.
+(hyperref)                removing `\\' on input line 597.
 
-[4] [5] [6] 
+[5]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 783.
+
+[6] [7] [8] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./CurriculumVitae.aux)
  ***********
@@ -426,21 +411,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `CurriculumVitae.out' has not changed.
-(rerunfilecheck)             Checksum: D6448AF6B3258FA5E231F75F29A1AB88;1482.
+(rerunfilecheck)             Checksum: 0EE4D53D1E0AE7E39960073B7A89DB6A;1722.
  ) 
 Here is how much of TeX's memory you used:
- 10535 strings out of 474116
- 164053 string characters out of 5743682
- 1948187 words of memory out of 5000000
- 32697 multiletter control sequences out of 15000+600000
+ 10557 strings out of 474116
+ 164332 string characters out of 5743682
+ 1947187 words of memory out of 5000000
+ 32707 multiletter control sequences out of 15000+600000
  594969 words of font info for 57 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 75i,13n,80p,739b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,80p,739b,599s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CurriculumVitae.pdf (6 pages, 98021 bytes).
+Output written on CurriculumVitae.pdf (8 pages, 106323 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 288 PDF objects out of 1000 (max. 8388607)
+ 265 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
