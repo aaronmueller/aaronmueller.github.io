@@ -94,3 +94,8 @@ pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
 	padding-top: 5.5px;
 	margin: 5px 15px 0px 0px;
 	font-family: 'Montserrat', Helvetica, sans-serif; }
+
+
+p + ul {
+    margin-top: -10px;
+}
