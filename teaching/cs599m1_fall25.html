@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+
+    <meta property="og:site_name" content="CS599 M1 (Interpretable Machine Learning)">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="CS599 M1 (Interpretable Machine Learning)">
+    <meta property="og:description" content="Understanding why AI does what it does">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS599 M1 (Interpretable Machine Learning)">
+    <meta name="twitter:description" content="Understanding why AI does what it does">
+    <meta name="twitter:url" content="https://aaronmueller.github.io/teaching/cs599m1_fall25.html">
+
+    <title>CS599 M1: Interpretable Machine Learning</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link href="../css/fonts.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="../files/bu_logo.ico"/>
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1063.0" data-gr-ext-installed="">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand brand" href="cs599m1_fall25.html">CS599 M1</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#links">Links</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#grading">Grading</a></li>
+                <li><a href="#conduct">Policies</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="header" style="text-align:center">
+    <a href="https://www.bu.edu/cs/">
+        <img src="../files/bu_logo.png" class="logo-right">
+    </a>
+    <h1>CS599 M1: Interpretable Machine Learning</h1>
+    <h3>Boston University - Fall 2025</h3>
+    <div style="clear:both;"></div>
+</div>
+
+<div class="container sec" id="intro">
+    <p>
+        AI systems have advanced remarkably in recent years, but they have also grown more opaque. For example,
+        ChatGPT and DeepSeek seem intelligent on the surface, but what have they really learned? Why and how do
+        they make the decisions that they do? The ability to answer questions like these is critical in
+        applications like healthcare or legal systems. This research seminar course explores the field of
+        interpretable machine learning, which seeks to understand the internal computational processes of machine
+        learning models—and sometimes, to precisely control these processes. We will cover foundational and
+        cutting-edge topics, including distributed representations, attribution methods, and the emerging field
+        of mechanistic interpretability. We will also cover open problems, such as interpretability illusions
+        and challenges in evaluation. Students will read and present research papers, lead and participate in
+        discussions on these topics, and conduct an interpretability research project.
+    </p>
+
+    <p>
+        <strong>Prerequisites</strong>
+    <ul>
+        <li>
+            Principles of Machine Learning (CAS CS 542) or equivalent.
+        </li>
+        <li>
+            Ability to use and modify machine learning code (most likely PyTorch).
+        </li>
+        <li>
+            A working knowledge of how neural networks work.
+        </li>
+        <li>
+            Just enough knowledge of convolutional neural networks and transformers to read research papers.
+        </li>
+    </ul>
+    </p>
+    <p>
+        <strong>Highly recommended prerequisites</strong>:
+        Not required, but it will be very useful to have taken at least one of Deep Learning, Natural Language Processing, Computer Vision, or Multimodal Machine Learning.
+    </p>
+    
+    <p>
+    <strong>Theme</strong>: This semester's general theme is <strong>mechanistic interpretability for neural networks</strong>. We will focus on understanding neural networks by understanding the computations implemented in their components, rather than just their input-output behaviors.
+    </p>
+    
+    <p>
+    <strong>Learning objectives</strong><br>Students will:
+    <ol>
+        <li>Gain exposure to foundational and cutting-edge research in interpretable machine learning.</li>
+        <li>Improve their written, visual, and oral scientific communication skills.</li>
+        <li>Improve their ability to read and constructively comment on technical papers.</li>
+        <li>Gain hands-on experience in developing and applying interpretability methods.</li>
+    </ol>
+    </p>
+</div>
+<hr>
+<div class="container sec" id="logistics">
+    <h2>Logistics</h2>
+    <ul>
+        <li><b>Classes:</b> Tuesdays and Thursdays 12:30pm - 1:45pm, CDS 801</li>
+        <li><b>Instructor:</b> Aaron Mueller (amueller@bu.edu)</li>
+        <li><b>Office hours:</b> Wednesdays 12pm - 1pm, CDS 806, or by appointment</li>
+        <li><b>News and announcements:</b> All news and announcements will be made in class and posted on this page.</li>
+        <li><b>Changes:</b> The instructor reserves the right to make changes to the syllabus or project due dates. These changes will be announced as early as possible.</li>
+    </ul>
+    <br>
+</div>
+<hr>
+<div class="container sec" id="links">
+    <h2>Links</h2>
+    <ul>
+        <li><a href="https://drive.google.com/drive/folders/1txKBKS26rq0Gx8U6hliIgLpvgx8pn-Xh?usp=sharing">Google Drive</a> for slides</li>
+        <li><a href="https://forms.gle/15VRM7dsCRAAJdRt8">Reaction Form</a> for nightly reactions</li>
+        <li><a href="https://www.gradescope.com/">Gradescope</a> for final project submissions</li>
+    </ul>
+</div>
+<hr>
+
+<div class="container sec" id="schedule" style="margin-top:0px">
+    <br>
+    <h2>Seminar Schedule</h2>
+    <p>Note: we will almost definitely alter this schedule! Order may also change depending on the availability of guests.</p>
+
+    <table class="table">
+        <colgroup>
+            <col style="width:12%">
+            <col style="width:10%">
+            <col style="width:20%">
+            <col style="width:30%">
+            <col style="width:20%">
+        </colgroup>
+        <thead>
+        <tr class="active">
+            <th>Date</th>
+            <th>Note</th>
+            <th>Topic</th>
+            <th>Readings</th>
+            <th>Student Presentation</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Sep 2, 2025</td>
+            <td></td>
+            <td>Course introduction
+                <ul>
+                    <li>Introduction to interpretability</li>
+                    <li>Course logistics</li>
+                    <li>Course topics</li>
+                </ul>
+            </td>
+            <td><i>Recommended</i>: <a href="https://yc015.github.io/TalkTuner-a-dashboard-ui-for-chatbot-llm/">Chen et al. (2024)</a>: Designing a Dashboard for Transparency and Control of Conversational AI</td>
+            <td><i>No student presentations</i></td>
+        </tr>
+        <tr>
+            <td>Sep 4, 2025</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>The intellectual history of interpretability</li>
+                    <li>Example paper presentation</li>
+                </ul>
+            </td>
+            <td><a href="https://www.nature.com/articles/323533a0">Rumelhart et al. (1986)</a>: Learning representations by back-propagating errors</td>
+            <td><i>No student presentations</i></td>
+        </tr>
+        <tr>
+            <td>Sep 9, 2025</td>
+            <td></td>
+            <td>Visualization
+                <ul>
+                    <li>Saliency maps</li>
+                </ul>
+            </td>
+            <td><a href="https://arxiv.org/abs/1312.6034">Simonyan et al. (2014)</a>: Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps</td>
+            <td>Simonyan et al. (2014)</td>
+        </tr>
+        <tr>
+            <td>Sep 11, 2025</td>
+            <td></td>
+            <td rowspan="2">Feature attribution
+                <ul>
+                    <li>Grad-CAM</li>
+                    <li>Integrated gradients</li>
+                </ul>
+            </td>
+            <td><a href="https://dl.acm.org/doi/10.1007/s11263-019-01228-7">Selvaraju et al. (2019)</a>: Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization</td>
+            <td>Selvaraju et al. (2019)</td>
+        </tr>
+        <tr>
+            <td>Sep 16, 2025</td>
+            <td></td>
+            <td><a href="https://dl.acm.org/doi/10.5555/3305890.3306024">Sundararajan et al. (2017)</a>: Axiomatic Attribution for Deep Networks</td>
+            <td>Sundararajan et al. (2017)</td>
+        </tr>
+        <tr>
+            <td>Sep 18, 2025</td>
+            <td></td>
+            <td>Credit assignment
+                <ul>
+                    <li>Explanation models</li>
+                    <li>Local vs. global explanations</li>
+                </ul>
+            </td>
+            <td><a href="https://dl.acm.org/doi/10.5555/3295222.3295230">Lundberg & Lee (2017)</a>: A Unified Approach to Interpreting Model Predictions
+                <br><br>
+                <i>Recommended</i>: <a href="https://dl.acm.org/doi/10.1145/2939672.2939778">Ribeiro et al. (2016)</a>: "Why Should I Trust You?": Explaining the Predictions of Any Classifier
+            </td>
+            <td>Lundberg & Lee (2017)</td>
+        </tr>
+        <tr>
+            <td>Sep 23, 2025</td>
+            <td></td>
+            <td>Influence functions</td>
+            <td><a href="https://dl.acm.org/doi/10.5555/3305381.3305576">Koh & Liang (2017)</a>: Understanding Black-box Predictions via Influence Functions</td>
+            <td>Koh & Liang (2017)</td>
+        </tr>
+        <tr>
+            <td>Sep 25, 2025</td>
+            <td></td>
+            <td>Component localization
+                <ul>
+                    <li>Causal mediation analysis</li>
+                    <li>Distributed representations</li>
+                </ul>
+            </td>
+            <td><a href="https://proceedings.neurips.cc/paper/2020/hash/92650b2e92217715fe312e6fa7b90d82-Abstract.html">Vig et al. (2020)</a>: Investigating Gender Bias in Language Models Using Causal Mediation Analysis
+                <br><br>
+                <i>Recommended</i>: <a href="https://www.persee.fr/doc/intel_0769-4113_1989_num_8_2_873">Thorpe (1989)</a>: Local vs. Distributed Coding
+            </td>
+            <td>Vig et al. (2020)</td>
+        </tr>
+        <tr>
+            <td>Sep 30, 2025</td>
+            <td></td>
+            <td rowspan="2">Understanding attention
+                <ul>
+                    <li>A quick intro to the attention mechanism</li>
+                    <li>Attention as explanation: pros and cons</li>
+                </ul>
+            </td>
+            <td><a href="https://papers.nips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html">Vaswani et al. (2017)</a>: Attention Is All You Need
+                <br>
+                <i>- and -</i>
+                <br>
+                <a href="https://aclanthology.org/W19-4828/">Clark et al. (2019)</a>: What Does BERT Look at? An Analysis of BERT's Attention
+            </td>
+            <td><i>No student presentations</i></td>
+        </tr>
+        <tr class="sechighlight5">
+            <td>Oct 2, 2025</td>
+            <td><strong>Project proposal due</strong></td>
+            <td><a href="https://aclanthology.org/N19-1357/">Jain & Wallace (2019)</a>: Attention Is Not Explanation
+                <br>
+                <i>- and -</i>
+                <br>
+                <a href="https://aclanthology.org/D19-1002/">Wiegreffe & Pinter (2019)</a>: Attention Is Not <i>Not</i> Explanation
+            </td>
+            <td>Jain & Wallace (2019)
+                <br>
+                <i>- or -</i>
+                <br>
+                Wiegreffe & Pinter (2019)
+            </td>
+        </tr>
+        <tr>
+            <td>Oct 7, 2025</td>
+            <td></td>
+            <td rowspan="2">Probing
+                <ul>
+                    <li>Auxiliary tasks</li>
+                    <li>Control tasks</li>
+                    <li>Selectivity and expressivity</li>
+                </ul>
+            </td>
+            <td><a href="https://arxiv.org/abs/1905.06316">Tenney et al. (2019)</a>: What Do You Learn from Context? Probing for Sentence Structure in Contextualized Word Representations</td>
+            <td>Tenney et al. (2019)</td>
+        </tr>
+        <tr>
+            <td>Oct 9, 2025</td>
+            <td></td>
+            <td><a href="https://aclanthology.org/D19-1275/">Hewitt & Liang (2019)</a>: Designing and Interpreting Probes with Control Tasks</td>
+            <td>Hewitt & Liang (2019)</td>
+        </tr>
+        <tr>
+            <td>Oct 14, 2025</td>
+            <td></td>
+            <td rowspan="2">Mechanistic Interpretability - Basics
+                <ul>
+                    <li>Circuit discovery</li>
+                    <li>Path patching</li>
+                    <li>Induction heads</li>
+                </ul>
+            </td>
+            <td><a href="https://arxiv.org/abs/2211.00593">Wang et al. (2023)</a>: Interpretability in the Wild: A Circuit for Indirect Object Identification in GPT-2 Small
+                <br><br>
+                <i>Recommended</i>: <a href="https://aclanthology.org/2024.blackboxnlp-1.30/">Saphra & Wiegreffe (2024)</a>: Mechanistic?
+            </td>
+            <td>Wang et al. (2023)</td>
+        </tr>
+        <tr class="sechighlight5">
+            <td>Oct 16, 2025</td>
+            <td><strong>Project proposal revision due</strong></td>
+            <td><a href="https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html">Olsson et al. (2022)</a>: In-context Learning and Induction Heads</td>
+            <td>Olsson et al. (2022)</td>
+        </tr>
+        <tr>
+            <td>Oct 21, 2025</td>
+            <td></td>
+            <td rowspan="2">Mechanistic Interpretability, pt. 2
+                <ul>
+                    <li>Targeted model editing</li>
+                    <li>Unlearning</li>
+                </ul>
+            </td>
+            <td><a href="https://papers.nips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html">Meng et al. (2022)</a>: Locating and Editing Factual Associations in GPT</td>
+            <td>Meng et al. (2022)</td>
+        </tr>
+        <tr>
+            <td>Oct 23, 2025</td>
+            <td></td>
+            <td><a href="https://aclanthology.org/2020.acl-main.647/">Ravfogel et al. (2020)</a>: Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection</td>
+            <td>Ravfogel et al. (2020)</td>
+        </tr>
+        <tr>
+            <td>Oct 28, 2025</td>
+            <td></td>
+            <td rowspan="2">Mechanistic Interpretability, pt. 3
+                <ul>
+                    <li>Featurization</li>
+                    <li>Causal abstraction</li>
+                    <li>Steering</li>
+                </ul>
+            </td>
+            <td><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/f6a8b109d4d4fd64c75e94aaf85d9697-Abstract-Conference.html">Wu*, Geiger* et al. (2023)</a>: Interpretability at Scale: Identifying Causal Mechanisms in Alpaca</td>
+            <td>Wu*, Geiger* et al. (2023)</td>
+        </tr>
+        <tr>
+            <td>Oct 30, 2025</td>
+            <td></td>
+            <td><a href="https://features.baulab.info">Marks et al. (2025)</a>: Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models</td>
+            <td>Marks et al. (2025)</td>
+        </tr>
+        <tr>
+            <td>Nov 4, 2025</td>
+            <td></td>
+            <td rowspan="2">Training dynamics
+                <ul>
+                    <li>Grokking</li>
+                    <li>Emergence and phase transitions</li>
+                </ul>
+            </td>
+            <td><a href="https://arxiv.org/abs/2201.02177">Power et al. (2022)</a>: Grokking: Generalization Beyond Overfitting</td>
+            <td>Power et al. (2022)</td>
+        </tr>
+        <tr>
+            <td>Nov 6, 2025</td>
+            <td></td>
+            <td><a href="https://arxiv.org/abs/2309.07311">Chen et al. (2024)</a>: Sudden Drops in the Loss: Syntax Acquisition, Phase Transitions, and Simplicity Bias in MLMs</td>
+            <td>Chen et al. (2024)</td>
+        </tr>
+        <tr>
+            <td>Nov 11, 2025</td>
+            <td></td>
+            <td rowspan="2">Inherently interpretable models
+                <ul>
+                    <li>Additive models</li>
+                    <li>Decision trees</li>
+                    <li>Decision sets</li>
+                </ul>
+            </td>
+            <td>
+                <a href="https://www.nature.com/articles/s42256-019-0048-x">Rudin (2019)</a>: Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead
+                <br>
+                <i>- and -</i>
+                <br>
+                <a href="https://arxiv.org/abs/1811.12615">Chen et al. (2018)</a>: An Interpretable Model with Globally Consistent Explanations for Credit Risk</td>
+            <td><i>No student presentations</i></td>
+        </tr>
+        <tr class="sechighlight5">
+            <td>Nov 13, 2025</td>
+            <td><strong>Midway report due</strong></td>
+            <td><a href="https://dl.acm.org/doi/10.1145/2939672.2939874">Lakkaraju et al. (2016)</a>: Interpretable Decision Sets: A Joint Framework for Description and Prediction</td>
+            <td>Lakkaraju et al. (2016)</td>
+        </tr>
+        <tr>
+            <td>Nov 18, 2025</td>
+            <td></td>
+            <td rowspan="2">Applications
+                <ul>
+                    <li>Bias and fairness</li>
+                    <li>Safety</li>
+                </ul>
+            </td>
+            <td><a href="https://dl.acm.org/doi/10.5555/3692070.3693122">Lee et al. (2024)</a>: A Mechanistic Understanding of Alignment Algorithms: A Case Study on DPO and Toxicity</td>
+            <td>Lee et al. (2024)</td>
+        </tr>
+        <tr>
+            <td>Nov 20, 2025</td>
+            <td></td>
+            <td><a href="https://arxiv.org/abs/2506.10922">Karvonen & Marks (2025)</a>: Robustly Improving LLM Fairness in Realistic Settings via Interpretability</td>
+            <td>Karvonen & Marks (2025)</td>
+        </tr>
+        <tr class="sechighlight4 centered">
+            <td>Nov 25, 2025</td>
+            <td colspan="4" style="color:red">No Class - Thanksgiving 🦃</td>
+        </tr>
+        <tr class="sechighlight4 centered">
+            <td>Nov 27, 2025</td>
+            <td colspan="4" style="color:red">No Class - Thanksgiving 🦃</td>
+        </tr>
+        <tr>
+            <td>Dec 2, 2025</td>
+            <td></td>
+            <td>Class-chosen cutting-edge topic 1</td>
+            <td>TBD</td>
+            <td>TBD</td>
+        </tr>
+        <tr>
+            <td>Dec 4, 2025</td>
+            <td></td>
+            <td>Class-chosen cutting-edge topic 2</td>
+            <td>TBD</td>
+            <td>TBD</td>
+        </tr>
+        <tr class="sechighlight2">
+            <td>Dec 9, 2025</td>
+            <td colspan="4"><strong>Poster day!</strong></td>
+        </tr>
+        <tr class="sechighlight5">
+            <td>Dec 18, 2025</td>
+            <td colspan="4"><strong>Final report due (midnight)</strong></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p>For our final week of class, let's focus on something that's currently the talk of the field. Possible topics could include:</p>
+    <ul>
+        <li>Multimodal (e.g., language and vision) interpretability</li>
+        <li>The geometry of language model activations:</li>
+        <ul>
+            <li>In-context learning of representations</li>
+            <li>The geometry of truthfulness decisions</li>
+            <li>The geometry of arithmetic operations</li>
+        </ul>
+        <li>Interpreting how language models perform arithmetic</li>
+        <li>Function vectors</li>
+        <li>Correlating brain activations with neural network activations</li>
+    </ul>
+</div>
+<hr>
+
+<div class="container sec" id="format">
+    <h2>Class format and preparation</h2>
+    <p>Throughout the semester, 25 classes will be dedicated to discussing each one of the research papers, 20 of which will be led by students. For classes with student presentations, 4 students (the student panel) will present the paper and lead the discussion, with follow-up questions from the audience (the questioners). These papers and their presentation dates can be found in the course schedule above.</p>
+    <ul>
+        <li><i>Slide Presentation</i>: 10&ndash;20 minutes. The student panel and/or Prof. Mueller guides the class through the slides. For student-led discussions, each student will briefly explain their slide and findings.</li>
+        <li><i>Open Discussion</i>: After the presentation, the paper discussion will last 45-60 minutes.</li>
+        <li><i>Roles and sign-up</i>: Students are required to fill the role-playing sign-up form before <strong>September 4</strong>. We will aim to honor your preferences, but please understand that adjustments may be necessary for popular papers! Enrolled students will receive priority, as this is a big part of the grade. Waitlisted students, please get in touch ASAP if you're able to enroll!</li>
+        <li><i>Slide and question submission</i>: All participants of the panel and questioners should prepare and submit the required materials by midnight the night before the scheduled discussion. This includes:
+        <ul>
+            <li>If you're presenting, prepare a Google Slides presentation with the other presenting students and upload to the class's Google Drive. If you're a reviewer, also upload your review to the Review folder of the Google Drive. (More detailed instructions for each role are in an example presentation in the Google Drive.)</li>
+            <li>If you're not presenting, 3&ndash;4 bullet points about the paper for the broader class discussion (via the Google Form).</li>
+            <li>Acknowledgment of the role you're playing for a paper. (If you have a role for a paper, in the same nightly reaction Google Form, you should select your role from the options and not fill out the reactions box.)</li>
+        </ul>
+    </ul>
+</div>
+
+<div class="container sec" id="grading">
+    <h2>Grading</h2>
+    <p>
+        The course is graded out of 100 total points. We'll use a standard grading scale:
+        <br>A: [90, 100]
+        <br>B: [80, 90)
+        <br>C: [70, 80)
+        <br>D: [60, 70)
+        <br>F: [0, 60)
+    </p>
+
+    <h4>Presentations and discussion: 50 points</h4>
+    <ul>
+        <li>
+            <b>Nightly reactions (20 points):</b> If you are not presenting, read the assigned paper and submit 3-4 reaction bullet points (sentences/questions) about it before midnight the night before class. Reactions to a particular paper grant you 1 point, amounting to a total of 20 points. The purpose of these is to help us find common points of interest and confusion, and facilitate in-class discussion. These should not be summaries of points in the paper, and should not be generic 1-word-answer questions or generic statements (for example, don't use “What was the learning rate?” Or “Didn't understand the intro.”). These will be the inspiration for in-class discussion, so they should be probing, analytical, and/or thought-provoking (for example, “Why did they use a linear probe, instead of something more powerful?”, or “This method looks just like saliency maps, except they compute it using multiple samples instead of just one.”).
+        </li>
+        <li>
+            <b>In-class interactions (10 points):</b> Students can earn up to 10 points from attendance and active participation. You can miss up to 3 classes without an excuse and still receive full credit. Each subsequent unexcused absence will incur a 3-point penalty. Active participation can earn you up to half a point per class. If you're in a presenting role, these points come from leading the class discussion.
+        </li>
+        <li>
+            <b>Paper presentation and review (20 points):</b> Four times during the semester, you'll be assigned to one of the roles from the list below, to review and present an aspect of a paper. This will allow you to read the paper from multiple perspectives. This collaborative effort, done with several other students, requires the creation of a slide deck (more detail and an example in the <a href="https://drive.google.com/drive/folders/1txKBKS26rq0Gx8U6hliIgLpvgx8pn-Xh?usp=sharing">Google Drive</a>). Successfully leading these discussions earns you up to 5 points per presentation, amounting to a total of 20 points.
+
+            <ul>
+                <li><b>Diagrammer:</b> Create 1-2 slides visually explaining the method and main idea(s) of the paper. Grading is based on whether the figure(s) is/are clear (2.5) and summarize(s) the <i>most important</i> idea(s) from the paper (2.5).</li>
+                <li><b>Reviewer:</b> Fill out the <a href="https://neurips.cc/Conferences/2025/ReviewerGuidelines">NeurIPS review form</a> for the paper (Ctrl+F for “Review Form”). See <a href="https://docs.google.com/document/d/1ssgUC-QC_2GsqDy5RQysIltm9fxhZV_GkIo_YYOrzrs/edit?usp=sharing">this example review</a>. Include a summary of your review on the last slide of your group's slides. Grading is based on whether you have completed a high-quality review of the paper before class (4), and summarize it convincingly on the slide (1).</li>
+                <li><b>Archaeologist:</b> Offer 1-3 slides of historical context relevant to the paper. What was the state of the field when the paper was written, and why was there a need for the paper? What was the paper's impact on later work? Grading is based on whether you have included prior relevant context (2), impact on the field (1), at least 2 prior works (1), and at least 1 work directly inspired by the paper (1).</li>
+                <li><b>Academic Researcher:</b> In 1-2 slides, propose a future academic research project based on the paper. Grading is based on whether the proposed idea is well-motivated (1) and relevant to the paper (2), and features an overview of the proposed methods (1) and intended impact (1).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <br>
+
+    <h4>Research Project: 50 points</h4>
+    <p>
+        This is an open-ended project where you will work in teams of 2&ndash;3 students to design and execute an interpretability project. The goal is to demonstrate your understanding of the tools, literature, and challenges in the field. Creativity is encouraged! The project has five main milestones, all due at 11:59pm on their respective deadlines.
+    </p>
+    <ol>
+        <li>
+            <b>Project proposal (7 points):</b> A 2-page description of what you intend to do, including datasets, methods, and experiments. Due Oct. 2.
+        </li>
+        <li>
+            <b>Project proposal revision (3 points):</b> Prof. Mueller will provide feedback to help teams find concrete research ideas. After receiving feedback, you will revise and resubmit your plan. Due Oct. 16.
+        </li>
+        <li>
+            <b>Midway progress report (10 points):</b> By this point, you should have run a few experiments, and have a fleshed-out plan for the rest of the project based on what did or didn't work. This should be a 4-to-5-page report in NeurIPS format elaborating on what you've done so far, and remaining work you plan to do. Describe the progress you've made, experiments you've run, results you've obtained, and how you plan to handle the rest of the project. While this is called “midway”, ideally you should be somewhat beyond halfway by this point! (Pivoting to a new direction from here is ok if things aren't working the way you initially hoped.) Due Nov. 13.
+        </li>
+        <li>
+            <b>Poster presentation (10 points):</b> All students will present their findings at a poster session on the last day of class, Dec. 9.
+        </li>
+        <li>
+            <b>Final report (20 points):</b> Students should write code and carry out additional experiments. The paper should be written in the standard NeurIPS conference paper format (between 5 and 8 pages—longer is not necessarily better!). Use this NeurIPS template. Students in groups are required to include a “Contributions” section at the end concretely listing each author's contributions. References and the Contributions section do not count toward the page limit. The final report should concisely summarize your findings and answer the following questions: 
+            <ol type="a">
+                <li>What problem are you addressing?</li>
+                <li>What approach did you take to address the problem, and why?</li>
+                <li>How did you evaluate the performance of the approach(es) you investigated?</li>
+                <li>What worked or didn't work? Do you have any guesses as to why?</li>
+            </ol>
+            Due Dec. 18.
+        </li>
+    </ol>
+    
+    Grading of the final project will be based on the following:
+    <ul>
+    <li><strong>Proposal</strong>: Well-motivated idea with a concrete experimental plan. Creativity is encouraged more than bulletproof-but-incremental ideas!
+    <li><strong>Proposal revision</strong>: The suggested feedback is integrated.</li>
+    <li><strong>Midway report:</strong>
+        <ul>
+            <li>Clear problem statement and introduction</li>
+            <li>The most essential related work is present</li>
+            <li>Reasonable set of initial experiments</li>
+            <li>Clear presentation of methods and evaluation protocol</li>
+            <li>Clear presentation and description of preliminary results</li>
+            <li>Well-reasoned discussion about your initial experiments. If successful, what do the experiments tell us so far? If they didn't turn out how you expected, why do you think this was?</li>
+            <li>Concrete plan for the rest of the project. It's ok to pivot from your original plan if needed!</li>
+        </ul>
+    </li>
+    <li><strong>Final report</strong>: Much like the midway report, but in addition:
+        <ul>
+            <li>The related work should be reasonably complete and well-integrated throughout the report</li>
+            <li>More complete methods section</li>
+            <li>More complete results section</li>
+            <li>Rigorous evaluation</li>
+            <li>Discussion and conclusion composed of well-formulated arguments, grounded in your experimental findings and the broader literature</li>
+            <li>Novelty and creativity</li>
+        </ul>
+    </li>
+    </ul>
+
+    <p>
+        <b>Can We Publish Our Final Project?</b> It is feasible to convert a course project into an academic publication, but it can take a lot of work! I encourage those interested to discuss this with me after the semester.
+    </p>
+</div>
+<hr>
+
+<div class="container sec" id="conduct">
+    <h2>Policies and Conduct</h2>
+
+    <h4>Collaboration Policy</h4>
+    <p>In machine learning, research is fundamentally collaborative at every step of the process. This is why the course regularly involves group work and group discussion. To this end, collaborative reading is also allowed and encouraged. When you collaboratively work on your nightly reactions, <strong>you must acknowledge your collaborators by listing them explicitly when filling out your reaction form</strong>. Feel free to ask other students your questions and workshop them before class.</p>
+
+    <br>
+    <h4>Outside Resources & AI Policy</h4>
+    <p>I strongly encourage you to use any outside source at your disposal when reading the papers and doing your final project. Your diagrams, slides, questions, implementations, and reports should be original, but you may take inspiration from existing resources as long as you give them proper credit. When doing your project, feel free to base your implementations on publicly available code as well (as long as you make significant modifications to accommodate your original idea), but be sure to give proper credit in your report and your GitHub README if you do so.</p>
+    <p>I support the use of AI systems as tools, but not as crutches or replacements for fundamental learning. What's the difference? AI as a tool includes help with phrasing and language, help with looking up primary sources, help planning an implementation or debugging code, and help workshopping a project idea. AI as a crutch/replacement includes having the system write one's entire reactions, to write most of one's code, or to generate reports. <strong>Employing AI to substantially write reactions or complete the final project will be considered an academic integrity violation.</strong> The line between tool and replacement can be blurry, so if you're unsure, I recommend asking!</p>
+    <p>Failing to properly cite an outside source is equivalent to taking credit for ideas that are not your own, which is plagiarism. This leads us to...</p>
+
+    <br>
+    <h4>Academic Integrity</h4>
+    <p>Read through <a href="https://www.bu.edu/provost/students/undergraduate/academic-integrity/bus-academic-conduct-code/">BU's Academic Conduct Code</a>. All students are expected to abide by these guidelines. In the context of this class, it's particularly important that you cite the source of your ideas, facts, and/or methods, and do not claim someone else's work as your own. This goes for the final project and for the nightly reactions.</p>
+    
+    <br>
+    <h4>Absence and Late Work Policy</h4>
+    <p>Attendance and participation form a large part of the grade for this course. I understand that students often cannot attend every class, so there is some flexibility baked into the course grading. You will not need to attend every single class to achieve the highest possible grade for class participation—but you will need to attend most of them!</p>
+    <p>If you do not complete a nightly reaction by midnight before class, you will receive a 0 for that reaction. If you miss a class where you would be in a non-presenting role, then to get nightly reaction credit, you'll need to complete the question assignment and upload it before the start of class. It's crucial that we're all reading the same papers at the same time, so there's no graceful way to accept late work for the readings. If you miss a class where you are in a presenting role, you must find another student to trade presentation slots with. To do this, you must send an email to me (including the student you're trading with in the email chain) that explains who's trading and to what days; the other student must confirm the trade at least 2 days before the presentation. If you are joining class from the waitlist, please let me know ASAP and we'll help you fill out your presentation slots.</p>
+    <p>For the project proposal, proposal revision, and midway report, each late day will cause a loss of 1 point, with no points 5 days after the deadline. Late submissions will not be accepted for the final project report. The final poster presentation cannot be easily made up.</p>
+
+    <br>
+    <h4>In-class Conduct</h4>
+    <p>Let's all follow the <a href="https://neurips.cc/public/CodeOfConduct">NeurIPS code of conduct</a> and the <a href="https://www.recurse.com/social-rules">Recurse Center Social Rules</a>. As in many research environments, people are coming from many different backgrounds and levels of experience with the material. Therefore, it's especially important for our learning that we maintain respect for everyone's perspective and input. I value the perspectives of individuals from all backgrounds. I broadly define diversity to include race, gender identity, national origin, ethnicity, religion, social class, age, sexual orientation, political background, and physical or learning ability. I will strive to make this classroom an inclusive space for all students; please let me know if there's anything I can do to improve. On that note...</p>
+
+    <br>
+    <h4>Accommodations</h4>
+    <p>Boston University's policy is to provide reasonable accommodations to students with qualifying disabilities who are enrolled in Boston University courses. Students seeking accommodations must engage in an interactive process with, and provide appropriate documentation of their disability to, Disability & Access Services (DAS). If this applies, please get in touch with me as soon as possible to discuss accommodations; note that students are not required to disclose information regarding their disability, if applicable, but should request approval for such accommodations through DAS beforehand.</p>
+
+    <br>
+    <h4>Religious Observance</h4>
+    <p>Students are permitted to be absent from class, including classes involving examinations, labs, excursions, and other special events, for purposes of religious observance.  In-class, take-home and lab assignments, and other work shall be made up in consultation with the student's instructors. More details on BU's religious observance policy are available here.</p>
+
+</div>
+<br><br>
+
+<script src="files/jquery.min.js"></script>
+<script src="files/bootstrap.min.js"></script>
+
+</body>
+</html>
