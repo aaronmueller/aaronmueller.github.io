@@ -23,6 +23,140 @@ img.avatar { margin-bottom: 30px; }
 .container > hr { margin: 30px 0; }
 .container > hr.footer {margin-bottom: 15px; }
 
+/* Navbar color */
+.navbar-default {
+    /* background-color: rgb(85,187,85);
+    border-color: rgb(129, 230, 129); */
+    background-color: #cc0000;
+    border-color: #cc0000;
+    text-align: center;
+}
+
+.navbar-default .navbar-brand {
+    color: #ecf0f1;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #68ACE5;
+}
+
+.navbar-default .navbar-text {
+    color: #ecf0f1;
+}
+
+.navbar-default .navbar-collapse > ul {
+    width: 80%;
+}
+
+.navbar-default .navbar-collapse > ul > li {
+    width: 20%;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #ecf0f1;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #68ACE5;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #68ACE5;
+    background-color: #002d72;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #68ACE5;
+    background-color: #002d72;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #002d72;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #002d72;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ecf0f1;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #ecf0f1;
+}
+
+.navbar-default .navbar-link {
+    color: #ecf0f1;
+}
+
+.navbar-default .navbar-link:hover {
+    color: #68ACE5;
+}
+
+/* Handle formatting on mobile */
+@media (max-width: 767px) {
+    .navbar-default .navbar-collapse > ul > li {
+        width: 100%;
+        text-align: left;
+    }
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    /* Make each row look like a card */
+    table tr {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ddd;
+        box-shadow: 2px 2px 1px #dadada;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    /* Behave  like a "row" */
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    /* Position table header as data labels */
+    td:before {
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    /* Label the data */
+    #schedule td:nth-of-type(1) {
+        font-weight: 500;
+    }
+}
+
+
 /* E-Mail */
 .obfuscate { unicode-bidi: bidi-override; direction: rtl; }
 
