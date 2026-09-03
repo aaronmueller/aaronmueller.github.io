@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+
+    <meta property="og:site_name" content="CS599 B1 (Advanced Natural Language Processing)">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="CS599 B1 (Advanced Natural Language Processing)">
+    <meta property="og:description" content="Getting computers to understand and use language">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS599 B1 (Advanced Natural Language Processing)">
+    <meta name="twitter:description" content="Getting computers to understand and use language">
+    <meta name="twitter:url" content="https://aaronmueller.github.io/teaching/cs599b1_fall26/home.html">
+
+    <title>CS599 B1: Advanced Natural Language Processing</title>
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+    <link href="../../css/fonts.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="../../files/bu_logo.ico"/>
+
+    <style>
+        .tc-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 30px 0;
+        }
+        
+        .outer-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .outer-list > li {
+            margin-bottom: 30px;
+        }
+        
+        .outer-list > li > strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .inner-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+        
+        .inner-list li {
+            margin-bottom: 5px;
+        }
+
+        .table > tbody > tr.quiz-row > td {
+        background-color: #c3c9f8;
+        }
+        .table > tbody > tr.quiz-row > td:first-child {
+            border-left: 4px solid #475cfc;
+        }
+    </style>
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1063.0" data-gr-ext-installed="">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand brand" href="home.html">CS599</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#logistics">Logistics</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="#grading">Grading</a></li>
+                <!-- <li><a href="#conduct">Policies</a></li>! -->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="header" style="text-align:center">
+    <br><br><br>
+    <h1>CS599 B1: Advanced Natural Language Processing</h1>
+        <a href="https://www.bu.edu/cs/">
+        <img src="../../files/bu_logo.png" class="logo-right" width="30%">
+    </a>
+    <h3>Fall 2026</h3>
+    <div style="clear:both;"></div>
+</div>
+
+<div class="container sec" id="intro">
+    <p>
+        This is a course aimed toward students interested in pursuing <b>research</b> in natural language processing. We will focus
+        on current methods (largely based on Transformers and LLMs). While it is not possible to cover the entirety of the NLP
+        research landscape in a single course, the content of this course will give you the core concepts and skills needed to
+        understand and extend the ideas of many papers being published in NLP (and related) venues today.
+    </p>
+
+    <p>
+        <strong>Prerequisites</strong>
+    <ul>
+        <li>
+            Probability
+        </li>
+        <li>
+            Proficiency in Python programming
+        </li>
+        <li>
+            Linear algebra
+        </li>
+        <li>
+            Calculus
+        </li>
+        <li>
+            A passing familiarity with supervised machine learning methods
+        </li>
+    </ul>
+    </p>
+    <p>
+        <strong>Highly recommended prerequisites</strong>:
+        While not strictly required, it will be very useful to have a good grasp of machine learning. If you have taken at least one of CS542, CS505, CS585, or a related course and performed well, you should be in good shape.
+        Also check out these resources to help get you acquainted with the basics of machine learning, programming in PyTorch, and Transformers:
+        <ul>
+            <li><a href="https://docs.pytorch.org/tutorials/beginner/pytorch_with_examples.html">The official PyTorch tutorial</a></li>
+            <li><a href="https://cs230.stanford.edu/blog/pytorch/">A more brief PyTorch tutorial</a></li>
+            <li><a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a></li>
+            <li><a href="http://neuralnetworksanddeeplearning.com/chap2.html">This short online book about neural networks and deep learning</a> (Chapters 1, 2, and 5), and <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">this video series by 3Blue1Brown on neural networks and backpropagation</a> (Chapters 1 through 4)</li>
+            <li><a href="https://huggingface.co/learn/llm-course/en/chapter1/1">This HuggingFace course</a></li>
+            <li><a href="https://aaronmueller.github.io/teaching/cs505_spring26/home.html">Slides and scheduled readings from Intro to NLP (Spring 2026)</a></li>
+        </ul>
+    </p>
+    
+    <p>
+    <strong>Learning objectives</strong><br>Students will:
+    <ol>
+        <li>Gain exposure to recent methods, systems, frameworks, and datasets in NLP</li>
+        <li>Understand the concepts and implementation details underlying the success of state-of-the-art NLP methods</li>
+        <li>Gain experience in performing original NLP research, and communicating one's findings</li>
+    </ol>
+    </p>
+</div>
+<hr>
+<div class="container sec" id="logistics">
+    <h2>Logistics</h2>
+    <b>Instructor:</b> Aaron Mueller (<a href="mailto:amueller@bu.edu">amueller@bu.edu</a>)<br>
+
+    <ul>
+        <li><b>Lectures:</b> Tuesdays and Thursdays 12:30pm - 1:45pm, MCS (111 Cummington Mall) B33</li>
+        <li><b>Office hours:</b>
+            <ul>
+                <li>Tue., 2:00pm - 3:30pm (CDS 806)</li>
+                <li>Wed., 4:00pm - 5:30pm (CDS 806)</li>
+            </ul>
+        </li>
+        <li><b>News and announcements:</b> All news and announcements will be made in class and posted on this page.</li>
+        <li><b>Changes:</b> The instructor reserves the right to make changes to the syllabus or project due dates. These changes will be announced as early as possible.</li>
+    </ul>
+    <br>
+    <ul>
+        <li>For questions, <a href="https://piazza.com/bu/fall2026/cs599b1">use our class Piazza.</a> Entry code in the slides from the first class.</li>
+        <li>For uploading homeworks/projects, we'll use <a href="https://www.gradescope.com/courses/1381588">Gradescope</a>. Entry code in the slides from the first class.</li>
+    </ul>
+    <br>
+</div>
+<hr>
+<div class="container sec" id="news">
+    <h2>News</h2>
+    <ul>
+        <li>Homework 1 has been released! You can download the instructions <a href="homeworks/hw1/CS599_HW1_Instructions.pdf">here</a>. <b>Start early</b>;
+        this assignment has many parts, and functions as a self-contained crash course into the fundamentals of how Transformer language models work. This will likely be
+        the most time-intensive assignment of the semester.</li>
+    </ul>
+</div>
+<hr>
+<div class="container sec" id="links">
+    <h2>Readings</h2>
+        <p>In the course schedule below, you can find the required readings for class. These will usually be research papers. You may find these readings helpful for coming up with questions before class, reinforcing your understanding,
+           and/or preparing for the quizzes. When we have quizzes, core concepts covered in the required readings before that test is fair game (<i>especially</i> if they were also
+           covered in lecture).
+        </p>
+        <p>I will also provide links to optional readings and resources related to the content we cover in class. These can be found in the schedule below. These are to supplement the course
+            material for those interested in reading further.
+        </p>
+</div>
+<hr>
+
+<div class="container sec" id="schedule" style="margin-top:0px">
+    <br>
+    <h2>Course Schedule</h2>
+    <p>Note: we will almost definitely alter this schedule! Order may also change depending on the availability of guests.</p>
+
+<table class="table table-striped">
+    <colgroup>
+        <col style="width:12%">
+        <col style="width:24%">
+        <col style="width:18%">
+        <col style="width:28%">
+        <col style="width:18%">
+    </colgroup>
+    <thead>
+        <tr class="active">
+            <th>Date</th>
+            <th>Topic</th>
+            <th>Homework</th>
+            <th>Readings</th>
+            <th>Quiz?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Sep. 3, 2026</td>
+            <td>Course overview; Review of language models</td>
+            <td>HW1 Released</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Sep. 8, 2026</td>
+            <td>Transformers</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>Transformers: <a href="https://arxiv.org/abs/1706.03762">Vaswani et al. (2017)</a></li>
+                    <li>GPT-2: <a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">Radford et al. (2019)</a></li>
+                </ul>
+                <i>Optional</i>:
+                <ul>
+                    <li>The Illustrated Transformer: <a href="https://jalammar.github.io/illustrated-transformer/">Alammar (2018)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Sep. 10, 2026</td>
+            <td>Tokenization and positional embeddings</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>BPE: <a href="https://aclanthology.org/P16-1162/">Sennrich et al. (2012)</a></li>
+                    <li>RoPE: <a href="https://arxiv.org/abs/2104.09864">Su et al. (2021)</a></li>
+                </ul>
+                <i>Optional</i>:
+                <ul>
+                    <li>NoPE: <a href="https://arxiv.org/abs/2305.19466">Kazemnejad et al. (2023)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Sep. 15, 2026</td>
+            <td>Optimizers and training</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>Adam: <a href="https://arxiv.org/abs/1412.6980">Kingma & Ba (2015)</a></li>
+                    <li>AdamW: <a href="https://arxiv.org/abs/1711.05101">Loshchilov & Hutter (2019)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Sep. 17, 2026</td>
+            <td>Generating and evaluating text</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>Nucleus sampling: <a href="https://arxiv.org/abs/1904.09751">Holtzman et al. (2020)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Sep. 22, 2026</td>
+            <td>Scaling laws, emergence, and in-context learning</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>Scaling laws: <a href="https://arxiv.org/abs/2001.08361">Kaplan et al. (2020)</a></li>
+                    <li>In-context learning/GPT-3: <a href="https://arxiv.org/abs/2005.14165">Brown et al. (2020)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Sep. 24, 2026</td>
+            <td>Fine-tuning, distillation, and instruction tuning</td>
+            <td><b>HW1 Due</b>, HW2 Released</td>
+            <td>
+                <ul>
+                    <li>Olmo 3: <a href="https://arxiv.org/abs/2512.13961">Olmo 3 Team (2025)</a></li>
+                    <li>Instruction tuning: <a href="https://arxiv.org/abs/2109.01652">Wei et al. (2022)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr class="quiz-row">
+            <td>Sep. 29, 2026</td>
+            <td>Post-training/Reinforcement Learning I</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>RLHF: <a href="https://arxiv.org/abs/2203.02155">Ouyang et al. (2022)</a></li>
+                </ul>
+            </td>
+            <td>Quiz I - Transformers</td>
+        </tr>
+        <tr>
+            <td>Oct. 1, 2026</td>
+            <td>Post-training/Reinforcement Learning II</td>
+            <td>Project proposal released</td>
+            <td>
+                <ul>
+                    <li>DPO: <a href="https://arxiv.org/abs/2305.18290">Rafailov et al. (2024)</a></li>
+                    <li>RLVR: <a href="https://arxiv.org/abs/2501.12948">DeepSeek R1 paper (2025)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Oct. 6, 2026</td>
+            <td>Post-training/Reinforcement Learning III; Agents I</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>ReAct: <a href="https://arxiv.org/abs/2210.03629">Yao et al. (2022)</a></li>
+                    <li><a href="https://arxiv.org/abs/2603.28052">Lee et al. (2026)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Oct. 8, 2026</td>
+            <td>Agents II</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>Multi-agent debate: <a href="https://arxiv.org/abs/2305.14325">Du et al. (2023)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Oct. 13, 2026</td>
+            <td><p style="color: red;"><i>Monday schedule - no class</i></p></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Oct. 15, 2026</td>
+            <td>
+                Long-context reasoning
+            </td>
+            <td><b>HW2 Due</b></td>
+            <td>
+                <ul>
+                    <li>Evaluating long-context reasoning: <a href="https://aclanthology.org/2024.tacl-1.9/">Liu et al. (2024)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr class="quiz-row">
+            <td>Oct. 20, 2026</td>
+            <td>Mixture-of-experts models</td>
+            <td><b>Project proposal due</b></td>
+            <td>
+                <ul>
+                    <li>Mixture-of-experts: <a href="https://arxiv.org/abs/1701.06538">Shazeer et al. (2017)</a></li>
+                </ul>
+            </td>
+            <td>Quiz II - RL and Agents</td>
+        </tr>
+        <tr>
+            <td>Oct. 22, 2026</td>
+            <td>Quantization</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>8-bit quantization: <a href="https://arxiv.org/abs/2208.07339">Dettmers et al. (2022)</a></li>
+                </ul>
+                <i>Optional</i>:
+                <ul>
+                    <li>4-bit quantization: <a href="https://arxiv.org/abs/2212.09720">Dettmers & Zettlemoyer (2023)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Oct. 27, 2026</td>
+            <td>Guest lecture - Uncertainty and confidence estimation</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li><a href="https://arxiv.org/abs/2305.14975">Tian et al. (2023)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Oct. 29, 2026</td>
+            <td>
+                <p style="color: red;"><i>No class - EMNLP</i></p>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nov. 3, 2026</td>
+            <td>AI safety and fairness</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=87DyyMV0kCY">BlackHat Talk on the OpenAI/HuggingFace incident</a></li>
+                    <li>Chain-of-thought Monitoring: <a href="https://arxiv.org/abs/2503.11926">Baker et al. (2025)</a></li>
+                    <li>Blog post about the recent history of chain-of-thought monitoring: <a href="https://ai.stanford.edu/blog/cot-monitoring-history/">Hase & Potts (2026)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr class="quiz-row">
+            <td>Nov. 5, 2026</td>
+            <td>Interpretability I</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>Causal mediation analysis: <a href="https://proceedings.neurips.cc/paper/2020/hash/92650b2e92217715fe312e6fa7b90d82-Abstract.html">Vig et al. (2020)</a></li>
+                    <li>DAS: <a href="https://arxiv.org/abs/2305.08809">Wu et al. (2024)</a></li>
+                </ul>
+                <i>Optional</i>:
+                <ul>
+                    <li>Survey on interpretability: <a href="https://aclanthology.org/2026.cl-1.10/">Mueller et al. (2026)</a></li>
+                </ul>
+            </td>
+            <td>Quiz III - Calibration and Efficiency</td>
+        </tr>
+        <tr>
+            <td>Nov. 10, 2026</td>
+            <td>Interpretability II</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>Linear representation hypothesis: <a href="https://arxiv.org/abs/2311.03658">Park et al. (2023)</a></li>
+                    <li>Manifold steering: <a href="https://arxiv.org/abs/2605.05115">Wurgaft et al. (2026)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nov. 12, 2026</td>
+            <td>Training dynamics I</td>
+            <td><b>Midway report due</b></td>
+            <td>
+                <ul>
+                    <li>Intervening during training: <a href="https://openreview.net/pdf?id=MO5PiKHELW">Chen et al. (2024)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nov. 17, 2026</td>
+            <td>Training dynamics II</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>Rational analysis of learning: <a href="https://arxiv.org/abs/2506.17859">Wurgaft*, Lubana* et al. (2025)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nov. 19, 2026</td>
+            <td>Diffusion LMs</td>
+            <td><b>Peer reviews due Friday, Nov. 20</b></td>
+            <td>
+                <ul>
+                    <li>Diffusion LLMs: <a href="https://arxiv.org/abs/2502.09992">Nie et al. (2025)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nov. 24, 2026</td>
+            <td>
+                <p style="color: red;"><i>Thanksgiving - no class</i></p>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nov. 26, 2026</td>
+            <td>
+                <p style="color: red;"><i>Thanksgiving - no class</i></p>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Dec. 1, 2026</td>
+            <td>State space models</td>
+            <td></td>
+            <td>
+                <ul>
+                    <li>Mamba: <a href="https://arxiv.org/abs/2312.00752">Gu & Dao (2024)</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr class="quiz-row">
+            <td>Dec. 3, 2026</td>
+            <td>Class choice</td>
+            <td>Poster PDF due <b>Friday, Dec. 4</b></td>
+            <td></td>
+            <td>Quiz IV - Interpretability and alternative architectures</td>
+        </tr>
+        <tr>
+            <td>Dec. 8, 2026</td>
+            <td>Guest lecture</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Dec. 10, 2026</td>
+            <td><b>Poster session</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>TBD</td>
+            <td></td>
+            <td><b>Final report due</b></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<hr>
+<br><br>
+
+<div class="container sec" id="topics">
+<h2>List of Topics</h2>
+<p>By the end of this course, you should be familiar with each of the following topics.</p>
+<div class="tc-container">
+    <ul class="outer-list">
+        <li>
+            Tokenization:
+            <ul class="inner-list">
+                <li>Words</li>
+                <li>Characters</li>
+                <li>Bytes</li>
+                <li>Unicode</li>
+                <li>UTF-8</li>
+                <li>Byte-pair encoding (BPE)</li>
+                <li>SentencePiece</li>
+            </ul>
+        </li>
+
+        <li>
+            Current language model architectures:
+            <ul class="inner-list">
+                <li>Transformers</li>
+                <li>Diffusion LMs</li>
+                <li>State space models</li>
+            </ul>
+        </li>
+
+        <li>
+            Positional embeddings:
+            <ul class="inner-list">
+                <li>Absolute positional embeddings</li>
+                <li>Rotary positional embeddings</li>
+                <li>Relative positional embeddings</li>
+            </ul>
+        </li>
+
+        <li>
+            Attention mechanisms:
+            <ul class="inner-list">
+                <li>Multi-head attention</li>
+                <li>Self-attention</li>
+            </ul>
+        </li>
+
+        <li>
+            Stages of the training pipeline:
+            <ul class="inner-list">
+                <li>Pre-training</li>
+                <li>Mid-training</li>
+                <li>Post-training</li>
+            </ul>
+        </li>
+
+        <li>
+            Optimization:
+            <ul class="inner-list">
+                <li>Adam</li>
+                <li>AdamW</li>
+                <li>Learning rate schedulers</li>
+            </ul>
+        </li>
+
+        <li>
+            Generation methods:
+            <ul class="inner-list">
+                <li>Greedy decoding</li>
+                <li>Nucleus sampling</li>
+            </ul>
+        </li>
+
+        <li>Scaling</li>
+
+        <li>In-context learning</li>
+
+
+        <li>
+            Reinforcement learning:
+            <ul class="inner-list">
+                <li>Policy</li>
+                <li>Reward</li>
+                <li>Value function</li>
+                <li>Bradley-Terry model</li>
+                <li>States</li>
+                <li>Actions</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <ul class="outer-list">      
+        <li>
+            Model types:
+            <ul class="inner-list">
+                <li>Base models</li>
+                <li>Instruction-tuned models</li>
+                <li>Reasoning models</li>
+                <li>Mixture-of-experts models</li>
+            </ul>
+        </li>
+        
+        <li>
+            Fine-tuning and adaptation:
+            <ul class="inner-list">
+                <li>Fine-tuning</li>
+                <li>Low-rank adapters</li>
+                <li>Distillation</li>
+            </ul>
+        </li>
+
+        <li>
+            Chain-of-thought Monitoring:
+            <ul class="inner-list">
+                <li>Chain-of-thought faithfulness</li>
+                <li>White-box monitoring methods</li>
+            </ul>
+        </li>
+
+        <li>
+            Evaluation:
+            <ul class="inner-list">
+                <li>Human evaluation</li>
+                <li>Automatic evaluation</li>
+                <li>Evaluation metrics</li>
+            </ul>
+        </li>
+
+        <li>
+            Agentic systems:
+            <ul class="inner-list">
+                <li>Tool use</li>
+                <li>Harnesses</li>
+                <li>Harness induction</li>
+                <li>Multi-agent frameworks</li>
+                <li>Scientific agents</li>
+            </ul>
+        </li>
+
+        <li>
+            Interpretability and training dynamics:
+            <ul class="inner-list">
+                <li>Causal mediation analysis</li>
+                <li>Gradient attribution</li>
+                <li>Causal abstraction</li>
+                <li>Distributed alignment search</li>
+                <li>Linear representation hypothesis</li>
+                <li>Manifold representations of concepts</li>
+                <li>Training-time interventions</li>
+                <li>Rational analysis</li>
+            </ul>
+        </li>
+
+        <li>
+            Post-training methods:
+            <ul class="inner-list">
+                <li>Instruction tuning</li>
+                <li>Reinforcement learning from human feedback (RLHF)</li>
+                <li>Direct preference optimization (DPO)</li>
+                <li>Reinforcement learning with verifiable rewards (RLVR)</li>
+                <li>Group relative policy optimization (GRPO)</li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+</div>
+
+<div class="container sec" id="grading">
+    <h2>Grading</h2>
+    <p>
+        The course is graded out of 100 total points.
+    </p>
+    
+
+    <h4>Homeworks: 20 points</h4>
+    <ul>
+        <li>
+            <b>Homework 1</b>: 12 points
+        </li>
+        <li>
+            <b>Homework 2</b>: 8 points
+        </li>
+    </ul>
+    <p>The homeworks are largely for your benefit as study tools. You may use AI to complete the homeworks, but you will find studying for the quizzes
+        much easier if you understand the methods you'll be implementing in the homeworks. Regardless of whether you decide to use AI tools, you (the student) are fully
+        responsible for what you submit.</p>
+    <br>
+
+    <h4>Quizzes: 30 points</h4>
+    <p>There will be 3-4 in-class quizzes, each worth 10 points (your lowest quiz grade will be dropped). See the course
+        schedule (rows highlighted in blue) for quiz dates.
+        Quizzes will happen at the start of class. These will consist of a mixture of multiple-choice and short-answer
+        questions. These will cover topics that were covered in lectures preceding the quiz (and homeworks if applicable).
+        Quizzes cannot be easily made up without significant advanced notice.
+    </p>
+    <br>
+
+    <h4>Final project: 50 points</h4>
+    <p>This is an open-ended project where you will pursue an original NLP project of your own design. You must pursue your project
+        in groups of 2 to 4 people.
+    </p>
+    <ul>
+        <li>
+            <b>Project proposal: 5 points</b>
+            <p>
+                Perform a literature review on your topic of choice. Also briefly describe your planned project,
+                including the task you'll be focusing on, your data, methods, baselines, and evaluation.
+            </p>
+        </li>
+        <li>
+            <b>Midway report: 15 points</b>
+            <p>
+                You will submit an intermediate version of your project to a submission portal.
+                You will receive 2 reviews from your classmates, as well as feedback from the instructor.
+            </p>
+        </li>
+        <li>
+            <b>Peer review: 5 points</b>
+            <p>
+                You will write reviews for 2 of your classmates' midway reports.
+            </p>
+        </li>
+        <li>
+            <b>Final report: 25 points</b>
+            <p>Describe your experiments, present your results, and report your findings in the style of a typical NLP paper.</p>
+        </li>
+    </ul>
+
+    <br>
+    
+    Grading of the final project will be based on the following:
+    <ul>
+    <li><strong>Proposal</strong>: Well-motivated idea with a concrete experimental plan. Creativity is encouraged more than bulletproof-but-incremental ideas!</li>
+    <li><strong>Midway report:</strong>
+        <ul>
+            <li>Clear problem definition and motivation</li>
+            <li>The most essential related work is present</li>
+            <li>Reasonable set of initial experiments</li>
+            <li>Clear presentation of methods and evaluation protocol</li>
+            <li>Clear presentation and description of preliminary results</li>
+            <li>Well-reasoned discussion about your initial experiments. If successful, what do the experiments tell us so far? If they didn't turn out how you expected, why do you think this was?</li>
+            <li>Concrete plan for the rest of the project. It's ok to pivot from your original plan if needed!</li>
+        </ul>
+    </li>
+    <li><strong>Final report</strong>: Much like the midway report, but in addition:
+        <ul>
+            <li>The related work should be reasonably complete and well-integrated throughout the report</li>
+            <li>More complete methods section</li>
+            <li>More complete results section</li>
+            <li>Rigorous evaluation</li>
+            <li>Discussion and conclusion composed of well-formulated arguments, grounded in your experimental findings and the broader literature</li>
+            <li>Novelty and creativity</li>
+        </ul>
+    </li>
+    <li><strong>Peer reviews</strong>:
+        <ul>
+            <li>Accurate summary</li>
+            <li>Fair, balanced, and constructive feedback</li>
+            <li>Well-reasoned justifications for your feedback</li>
+            <li>Rating follows from the justification</li>
+        </ul>
+    </li>
+    </ul>
+
+    <p>
+        <b><i>Can we publish our final project?</i></b> It is feasible to convert a course project into an academic publication, but it can take a lot of work! I encourage those interested to discuss this with me at the end of the semester.
+    </p>
+</div>
+<hr>
+
+<div class="container sec" id="conduct">
+    <h2>Policies and Conduct</h2>
+
+    <br>
+    <h4>Outside Resources & AI Policy</h4>
+    <p>
+        <b>AI tools are allowed for the homeworks.</b> I recommend doing the assignments on your own as quiz preparation, but for the purpose of grading,
+        you can complete the assignments completely with AI if you so choose. It is the student's responsibility to verify any submitted content.
+    </p>
+        <b>AI tools are partially allowed for the final project</b>. Our policy here is more nuanced: you may use AI as a tool, but do not use AI as a crutch or replacement for
+        thinking. What's the difference? AI as a tool includes:
+        <ul>
+            <li>Using AI to help you workshop your initial ideas</li>
+            <li>Using AI to refine your writing, including spell-checking, reorganization, among other copyediting-like actions</li>
+            <li>Using AI to help you write/debug code</li>
+        </ul>
+
+        AI as a crutch/replacement includes:
+        <ul>
+            <li>Using AI to come up with your final project idea for you from scratch</li>
+            <li>Using AI to write all of your code</li>
+            <li>Using AI to generate your reports</li>
+        </ul>
+        
+        <p>A good heuristic is that "AI as a crutch/replacement" includes anything where you no longer understand core detail(s) of what is in your code or writing.
+        The line between tool and crutch can sometimes be fuzzy, so if you're unsure, I recommend asking ahead of time! I promise not to judge
+        if you ask before you turn in the assignment. :)</p>
+
+        <p>Note that points will be deducted if we cannot understand the content of the report (due to, for example, an overly dense writing style featuring many undefined
+        technical terms, hyphenated compounds, or excessive numeric detail throughout). Pangram scores will not be used to determine scores directly, but may
+        be used as part of the justification for removing points if the clarity of the presentation is a concern first, or if any references are found to be hallucinated,
+        among other reasons.</p>
+        
+        <p>The most recent version of Pangram has been found to only very rarely yield false positives. Even if you use AI to completely rewrite text that
+        you wrote first, it will typically return 100% AI-edited, rather than 100% AI-generated (which is still not ideal, but won't be penalized directly).
+        If you lose points due to this policy, you may come to office hours and explain your terms, logic, and reasoning through your methods and results more
+        clearly. If the flow of ideas is still not particularly logical or you cannot answer questions about the content or implementation, the deduction will stand.</p>
+    <p>
+        <b>No AI tools are allowed during quizzes.</b> These will be hand-written in class.
+    </p>
+
+    <p>I strongly encourage you to use any outside source at your disposal when doing the homework and your final project. Your reports and code should be original, but you may take inspiration from existing papers as long as you give them proper credit. When doing your project, feel free to base your implementations on publicly available code as well (as long as you make significant modifications to accommodate your original idea), but be sure to give proper credit in your report and your GitHub README if you do so.</p>
+    <p>
+        For the final project, failing to properly cite an outside source is equivalent to taking credit for ideas that are not your own, which is plagiarism. 
+    </p>
+
+    <br>
+    <h4>Academic Integrity</h4>
+    <p>Read through <a href="https://www.bu.edu/provost/students/undergraduate/academic-integrity/bus-academic-conduct-code/">BU's Academic Conduct Code</a>. All students are expected to abide by these guidelines. In the context of this class, it's particularly important that you cite the source of your ideas, facts, and/or methods, and do not claim someone else's work as your own.</p>
+    <p>You are allowed to work in groups to do the homeworks, but you should upload your homework individually.</p>
+    
+    <br>
+    <h4>Absence and Late Work Policy</h4>
+    <p>Attendance will not be taken. Attend lectures as you wish.</p>
+    <p>
+        You have <strong>5 free late days</strong> that you can use however you wish with no excuse necessary. Using a late day means that
+        you can still receive full credit for the assignment with no late penalty. Turning in an assignment late after using all your late days
+        will incur a 10% drop in the score for each late day. 5 days after an assignment's due date, the assignment can no longer be turned in, regardless of whether
+        you use your free late days.
+        This applies to all homeworks. It also applies to the proposal and midway report for the final project&mdash;<strong>but not the final report</strong>, which must
+        be turned in on time. Note that a late day is a step function: turning in a homework 5 minutes late is equivalent to turning it in 23 hours late,
+        so if you know you'll be late, we recommend taking the extra time to verify your understanding of the material.
+    </p>
+    <p>
+        Extensions can be negotiated in cases of medical emergency or other sudden pressing circumstances. Students should contact the course staff ASAP and negotiate
+        <i>before the assignment's original due date</i>. If this applies to the first homework, please come talk to us the first day of class.
+    </p>
+    <p>
+        Quizzes cannot easily be made up. If you know you cannot make a quiz day, <i>you must notify us at least 14 days in advance</i> so that we can make
+        alternate arrangements.
+    </p>
+
+    <br>
+    <h4>Accommodations</h4>
+    <p>Boston University's policy is to provide reasonable accommodations to students with qualifying disabilities who are enrolled in Boston University courses. Students seeking accommodations must engage in an interactive process with, and provide appropriate documentation of their disability to, Disability & Access Services (DAS). If this applies, please get in touch with me as soon as possible to discuss accommodations; note that students are not required to disclose information regarding their disability, if applicable, but should request approval for such accommodations through DAS beforehand.</p>
+
+    <br>
+    <h4>Religious Observance</h4>
+    <p>Students are permitted to be absent from class, including classes involving examinations, labs, excursions, and other special events, for purposes of religious observance.  In-class, take-home and lab assignments, and other work shall be made up in consultation with the student's instructors. More details on BU's religious observance policy are available <a href="https://www.bu.edu/chapel/students/religious-holidays-policies/">here</a>.</p>
+
+    <br>
+    <h4>Acknowledgments</h4>
+    <p>Much of the content in this course was inspired by NLP courses taught by Tatsunori Hashimoto, Percy Liang, Sean Welleck, and Greg Durrett. Please do check out their syllabi (available online)
+        if you're interested in getting a new perspective on many of these topics!
+    </p>
+</div>
+<br><br>
+
+<script src="files/jquery.min.js"></script>
+<script src="files/bootstrap.min.js"></script>
+
+</body>
+</html>
